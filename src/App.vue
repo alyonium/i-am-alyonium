@@ -1,28 +1,50 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <about/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import About from './components/About';
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld,
+    About,
   },
+
+  data: () => ({
+    //
+  }),
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@font-face {
+  font-family: 'Hack';
+  src: url('~@/assets/fonts/Hack-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
 }
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+* {
+  font-family: 'Hack', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
 </style>
