@@ -1,18 +1,21 @@
 <template>
-  <v-row>
-    <p>{{ title }} {</p>
+  <v-col
+    cols="12"
+  >
+    <h2 class="bracket">{{ title }} {</h2>
     <slot></slot>
-    <p>}</p>
-  </v-row>
+    <p class="bracket">}</p>
+  </v-col>
 </template>
 
 <script>
 export default {
   name: 'BracketWrapper',
   props: {
-    title: String
-  }
-}
+    title: String,
+  },
+};
 </script>
 <style>
+
 </style>

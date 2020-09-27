@@ -30,6 +30,11 @@ export default {
   font-style: normal;
 }
 
+* {
+  font-family: 'Hack', sans-serif;
+  font-weight: 400;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -41,10 +46,11 @@ export default {
   }
 }
 
-* {
-  font-family: 'Hack', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+.container {
+  height: 100vh;
 }
 
+#app {
+  background: #000;
+}
 </style>

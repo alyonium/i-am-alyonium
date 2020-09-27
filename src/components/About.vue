@@ -1,7 +1,6 @@
 <template>
   <v-container
-      class="d-flex align-center"
-      style="height: 100vh; border: 1px solid red;">
+      class="d-flex align-center">
     <bracket-wrapper title=".About">
       <about-content></about-content>
     </bracket-wrapper>
@@ -28,5 +27,9 @@ export default {
 </script>
 
 <style>
-
+.bracket {
+  font-size: 3.5rem;
+  color: #a00037;
+  text-shadow: -2px 2px 1px #651fff;
+}
 </style>
