@@ -47,7 +47,7 @@ export default {
 }
 
 .container {
-  height: 100vh;
+  height: 100%;
 }
 
 #app {

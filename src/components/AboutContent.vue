@@ -1,12 +1,12 @@
 <template>
-  <v-row class="no-gutters pa-5">
+  <v-row
+    class="no-gutters pa-md-5 pa-0">
     <v-col
         cols="12"
         md="7"
         class="d-flex justify-center align-center"
         order-md="1"
-        order-sm="2"
-        order-xs="2">
+        order="2">
       <p
         class="slide-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -24,10 +24,10 @@
         offset="0"
         class="d-flex justify-center align-center"
         order-md="2"
-        order-sm="1"
-        order-xs="1">
-      <animatedBorderWrapper frameColor="purple">
+        order="1">
+      <animatedBorderWrapper frameColor="purple" style="position: relative;">
         <img src="../assets/img/myFace.jpeg" alt="it's me">
+        <img src="../assets/img/romb5.png" alt="romb" id="romb5">
       </animatedBorderWrapper>
     </v-col>
   </v-row>
@@ -59,24 +59,43 @@ export default {
     object-fit: cover;
   }
 
-  @media (min-width: 960px) and (max-width: 1263px) {
-    .slide-text {
-      padding-left: 40px;
-    }
+  #romb3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
+  @media (max-width: 1264px) {
     img {
       width: 300px;
       height: 300px;
       border-radius: 0;
+      margin-top: 20px;
+    }
+
+    .slide-text {
+      margin-top: 40px;
+      margin-bottom: 20px !important;
+      padding-left: 40px;
     }
   }
 
-  @media (min-width: 600px) and (max-width: 959px) {
+  @media (max-width: 960px) {
     .slide-text {
       padding-left: 0;
       max-width: 500px;
-      margin-top: 40px;
-      margin-bottom: 0 !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .slide-text {
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .slide-text {
+      max-width: 300px;
     }
   }
 </style>

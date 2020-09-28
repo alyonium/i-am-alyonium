@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="{'animated-border': true, 'animated-border_pink': isPink, 'animated-border_purple': isPurple, 'animated-border_blue': isBlue}">
+    :class="{'animated-border': deviceScreenHeight(), [`animated-border_${frameColor}`]: isAnimate}">
     <slot></slot>
   </div>
 </template>
@@ -13,10 +13,20 @@ export default {
   },
   data() {
     return {
-      isPink: (this.frameColor === 'pink'),
-      isPurple: (this.frameColor === 'purple'),
-      isBlue: (this.frameColor === 'blue'),
+      isAnimate: !(window.innerWidth <= 1263),
     };
+  },
+  methods: {
+    deviceScreenHeight() {
+      this.isAnimate = !(window.innerWidth <= 1263);
+      return !(window.innerWidth <= 1263);
+    },
+  },
+  created() {
+    window.addEventListener('resize', this.deviceScreenHeight);
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.deviceScreenHeight);
   },
 };
 
