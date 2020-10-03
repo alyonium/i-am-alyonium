@@ -1,21 +1,21 @@
 <template>
   <v-container
       class="d-flex align-center">
-    <bracket-wrapper title=".About" color="pink" shadow="shadow-purple">
-      <about-content></about-content>
+    <bracket-wrapper title=".Portfolio" color="blue" shadow="shadow-orange">
+      <portfolio-content></portfolio-content>
     </bracket-wrapper>
   </v-container>
 </template>
 
 <script>
 import BracketWrapper from '@/components/BracketWrapper';
-import AboutContent from '@/components/AboutContent';
+import PortfolioContent from '@/components/PortfolioContent';
 
 export default {
   name: 'About',
   components: {
     BracketWrapper,
-    AboutContent,
+    PortfolioContent,
   },
   props: {
   },
@@ -26,5 +26,5 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 </style>

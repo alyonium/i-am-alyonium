@@ -9,11 +9,12 @@
         order="2">
       <p
         class="slide-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        💅🏼 Алёна<br>
+        🎂 19 лет<br>
+        🌏 Россия, <nobr>Санкт-Петербург</nobr><br>
+        👩‍🏫 БГТУ "Военмех"<br>
+        👩‍💻 1 год<br>
+        👄 🇷🇺 🇺🇸<br>
       </p>
     </v-col>
 
@@ -26,8 +27,8 @@
         order-md="2"
         order="1">
       <animatedBorderWrapper frameColor="purple" style="position: relative;">
-        <img src="../assets/img/myFace.jpeg" alt="it's me">
-        <img src="../assets/img/romb5.png" alt="romb" id="romb5">
+        <img src="../assets/img/myFace.jpeg" alt="it's me" class="photo">
+        <img src="../assets/img/romb6.png" alt="romb" id="romb6" class="photo">
       </animatedBorderWrapper>
     </v-col>
   </v-row>
@@ -47,26 +48,30 @@ export default {
 </script>
 <style lang="scss">
   .slide-text {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     color: #b388ff;
-    padding-left: 60px;
+    padding-left: 40px;
+    margin-bottom: 0 !important;
   }
 
-  img {
+  .photo {
     width: 400px;
     height: 400px;
     border-radius: 80px 0;
     object-fit: cover;
   }
 
-  #romb3 {
+  #romb6 {
     position: absolute;
-    top: 0;
-    left: 0;
+    right: -45px;
+    width: 40%;
+    bottom: -45px;
+    height: 40%;
+    display: none;
   }
 
   @media (max-width: 1264px) {
-    img {
+    .photo {
       width: 300px;
       height: 300px;
       border-radius: 0;
@@ -74,28 +79,58 @@ export default {
     }
 
     .slide-text {
+      font-size: 1.8rem;
       margin-top: 40px;
       margin-bottom: 20px !important;
-      padding-left: 40px;
+      padding-left: 20px;
+    }
+
+    #romb6 {
+      display: block;
     }
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 959px) {
     .slide-text {
       padding-left: 0;
       max-width: 500px;
+      margin-top: 50px;
+    }
+
+    .photo {
+      width: 440px;
+      height: 440px;
     }
   }
 
   @media (max-width: 600px) {
     .slide-text {
-      max-width: 400px;
+      max-width: 300px;
+    }
+
+    .photo {
+      width: 300px;
+      height: 300px;
     }
   }
 
   @media (max-width: 400px) {
     .slide-text {
       max-width: 300px;
+      font-size: 25px;
+      padding-left: 10px;
+    }
+
+    .photo {
+      width: 290px;
+      height: 290px;
+    }
+
+    #romb6 {
+      width: 35%;
+      height: 35%;
+      right: -20px;
+      bottom: -35px;
     }
   }
 </style>

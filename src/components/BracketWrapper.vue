@@ -2,9 +2,11 @@
   <v-col
     cols="12"
   >
-    <h2 class="bracket">{{ title }} {</h2>
+    <h2 class="bracket"
+        :class="{[`bracket_${color}`]: true, [`bracket_${shadow}`]: true}">{{ title }} {</h2>
     <slot></slot>
-    <p class="bracket">}</p>
+    <p class="bracket"
+       :class="{[`bracket_${color}`]: true, [`bracket_${shadow}`]: true}">}</p>
   </v-col>
 </template>
 
@@ -13,9 +15,36 @@ export default {
   name: 'BracketWrapper',
   props: {
     title: String,
+    color: String,
+    shadow: String,
   },
 };
 </script>
-<style>
+<style lang="scss">
+.bracket {
+  font-size: 3.5rem;
+  &_blue {
+    color: #448aff;
+  }
+  &_pink {
+    color: #a00037;
+  }
+  &_shadow-orange {
+    text-shadow: -2px 2px 1px #ff5722;
+  }
+  &_shadow-purple {
+    text-shadow: -2px 2px 1px #651fff;
+  }
+}
+@media (max-width: 600px) {
+  .bracket {
+    font-size: 3rem;
+  }
+}
 
+@media (max-width: 400px) {
+  .bracket {
+    font-size: 2.3rem;
+  }
+}
 </style>

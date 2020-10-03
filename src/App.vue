@@ -2,11 +2,13 @@
   <v-app>
     <v-main>
       <about/>
+      <portfolio/>
     </v-main>
   </v-app>
 </template>
 
 <script>
+import Portfolio from '@/components/Portfolio';
 import About from './components/About';
 
 export default {
@@ -14,6 +16,7 @@ export default {
 
   components: {
     About,
+    Portfolio,
   },
 
   data: () => ({
@@ -47,10 +50,16 @@ export default {
 }
 
 .container {
-  height: 100%;
+  height: 100vh;
 }
 
 #app {
   background: #000;
+}
+
+@media (max-width: 960px) {
+  .container {
+    height: auto;
+  }
 }
 </style>

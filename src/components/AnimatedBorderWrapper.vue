@@ -13,13 +13,13 @@ export default {
   },
   data() {
     return {
-      isAnimate: !(window.innerWidth <= 1263),
+      isAnimate: !(window.innerWidth <= 1264),
     };
   },
   methods: {
     deviceScreenHeight() {
-      this.isAnimate = !(window.innerWidth <= 1263);
-      return !(window.innerWidth <= 1263);
+      this.isAnimate = !(window.innerWidth <= 1264);
+      return !(window.innerWidth <= 1264);
     },
   },
   created() {
@@ -116,7 +116,7 @@ export default {
 }
 
 @media (min-width: 960px) and (max-width: 1263px) {
-  .animated-border { //убрать этот класс через js
+  .animated-border {
     &:hover {
       &::before,
       &::after {
@@ -127,9 +127,5 @@ export default {
       }
     }
   }
-}
-
-@media (max-width: 600px) and (min-width: 959px) {
-
 }
 </style>
