@@ -5,23 +5,12 @@
         cols="12"
         md="3"
         class="d-flex justify-center align-center"
-        offset="1">
+        offset-md="1"
+        offset="0">
 
-      <div style="position: relative;">
-        <img src="../assets/img/temp1.png" alt="" style="border: 2px solid #448aff;">
-      </div>
-
-    </v-col>
-
-    <v-col
-      cols="12"
-      md="3"
-      class="d-flex justify-center align-center"
-      offset="1">
-
-      <div style="position: relative;">
-        <img src="../assets/img/temp2.png" alt="" style="border: 2px solid #448aff;">
-      </div>
+      <animated-border-wrapper frame-color="pink-purple">
+        <a href="https://alyonium.github.io/space/"><img src="../assets/img/temp1.png" alt="screenshot" class="portfolio-photo"></a>
+      </animated-border-wrapper>
 
     </v-col>
 
@@ -29,27 +18,48 @@
       cols="12"
       md="3"
       class="d-flex justify-center align-center"
-      offset="1">
+      offset-md="1"
+      offset="0">
 
-      <div style="position: relative;">
-        <img src="../assets/img/temp3.png" alt="" style="border: 2px solid #448aff;">
-      </div>
+      <animated-border-wrapper frame-color="pink-purple">
+        <a href="https://alyonium.github.io/travel/"><img src="../assets/img/temp2.png" alt="screenshot" class="portfolio-photo"></a>
+      </animated-border-wrapper>
 
     </v-col>
 
     <v-col
-      cols="11"
-      offset="1"
+      cols="12"
+      md="3"
+      class="d-flex justify-center align-center"
+      offset-md="1"
+      offset="0">
+
+      <animated-border-wrapper frame-color="pink-purple">
+        <a href="https://alyonium.github.io/kindergarden/"><img src="../assets/img/temp3.png" alt="screenshot" class="portfolio-photo"></a>
+      </animated-border-wrapper>
+
+    </v-col>
+
+    <v-col
+      md="11"
+      sm="12"
+      xs="12"
+      offset-md="1"
+      offset-sm="0"
+      offset-xs="0"
       class="d-flex justify-center align-center">
-      <p class="portfolio-link">Больше моих работ можно найти <a href="#">здесь</a> 🍓</p>
+      <p class="portfolio-link">Больше моих работ можно найти <nobr><a href="#">здесь</a> 🍓</nobr> </p>
     </v-col>
   </v-row>
 </template>
 
 <script>
+import AnimatedBorderWrapper from '@/components/AnimatedBorderWrapper';
+
 export default {
-  name: 'AboutContent',
+  name: 'PortfolioContent',
   components: {
+    AnimatedBorderWrapper,
   },
   props: {
   },
@@ -60,6 +70,7 @@ export default {
   .portfolio-link {
     color: #448aff;
     margin-top: 30px;
+    text-align: center;
   }
 
   .portfolio-link a {
@@ -75,10 +86,18 @@ export default {
     text-decoration: none;
   }
 
-  img {
+  .portfolio-photo {
     width: 300px;
     height: 300px;
     object-fit: cover;
+    border: 5px solid transparent;
+    transition: 0.3s;
+  }
+
+  .portfolio-photo:hover {
+    transition: 0.3s;
+    transform: rotate(-10deg);
+    border: 8px solid transparent;
   }
 
   #romb6 {
@@ -91,11 +110,16 @@ export default {
   }
 
   @media (max-width: 1264px) {
-    img {
-      width: 300px;
-      height: 300px;
-      border-radius: 0;
+    .portfolio-photo {
+      width: 250px;
+      height: 250px;
+      border: 2px solid #448aff;
+      box-shadow: 0 0 10px 2px #448aff;
       margin-top: 20px;
+      &:hover {
+        transform: none;
+        border: 2px solid #448aff;
+      }
     }
 
     .slide-text {
@@ -110,14 +134,14 @@ export default {
     }
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 959px) {
     .slide-text {
       padding-left: 0;
       max-width: 500px;
       margin-top: 50px;
     }
 
-    img {
+    .portfolio-photo {
       width: 440px;
       height: 440px;
     }
@@ -128,7 +152,7 @@ export default {
       max-width: 300px;
     }
 
-    img {
+    .portfolio-photo {
       width: 300px;
       height: 300px;
     }
@@ -141,7 +165,7 @@ export default {
       padding-left: 10px;
     }
 
-    img {
+    .portfolio-photo {
       width: 290px;
       height: 290px;
     }

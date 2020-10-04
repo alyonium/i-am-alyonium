@@ -26,10 +26,10 @@
         class="d-flex justify-center align-center"
         order-md="2"
         order="1">
-      <animatedBorderWrapper frameColor="purple" style="position: relative;">
+      <animated-border-wrapper frame-color="pink-purple" style="position: relative">
         <img src="../assets/img/myFace.jpeg" alt="it's me" class="photo">
-        <img src="../assets/img/romb6.png" alt="romb" id="romb6" class="photo">
-      </animatedBorderWrapper>
+        <img src="../assets/img/romb6.png" alt="romb" id="romb6">
+      </animated-border-wrapper>
     </v-col>
   </v-row>
 </template>
@@ -57,8 +57,15 @@ export default {
   .photo {
     width: 400px;
     height: 400px;
-    border-radius: 80px 0;
     object-fit: cover;
+    border: 5px solid transparent;
+    transition: 0.3s;
+  }
+
+  .photo:hover {
+    transition: 0.3s;
+    transform: rotate(-10deg);
+    border: 8px solid transparent;
   }
 
   #romb6 {
@@ -74,10 +81,14 @@ export default {
     .photo {
       width: 300px;
       height: 300px;
-      border-radius: 0;
       margin-top: 20px;
+      border: 2px solid #651fff;
+      box-shadow: 0 0 10px 2px #651fff;
+      &:hover {
+        transform: none;
+        border: 1px solid #651fff;
+      }
     }
-
     .slide-text {
       font-size: 1.8rem;
       margin-top: 40px;
