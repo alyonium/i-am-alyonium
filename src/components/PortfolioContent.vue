@@ -1,6 +1,6 @@
 <template>
   <v-row
-    class="no-gutters pa-md-5 pa-0">
+    class="no-gutters pt-8 pb-5 pa-0">
     <v-col
         cols="12"
         md="3"
@@ -8,7 +8,7 @@
         offset-md="1"
         offset="0">
 
-      <animated-border-wrapper frame-color="pink-purple">
+      <animated-border-wrapper frame-color="light-pink-blue">
         <a href="https://alyonium.github.io/space/"><img src="../assets/img/temp1.png" alt="screenshot" class="portfolio-photo"></a>
       </animated-border-wrapper>
 
@@ -21,7 +21,7 @@
       offset-md="1"
       offset="0">
 
-      <animated-border-wrapper frame-color="pink-purple">
+      <animated-border-wrapper frame-color="light-pink-blue">
         <a href="https://alyonium.github.io/travel/"><img src="../assets/img/temp2.png" alt="screenshot" class="portfolio-photo"></a>
       </animated-border-wrapper>
 
@@ -34,7 +34,7 @@
       offset-md="1"
       offset="0">
 
-      <animated-border-wrapper frame-color="pink-purple">
+      <animated-border-wrapper frame-color="light-pink-blue">
         <a href="https://alyonium.github.io/kindergarden/"><img src="../assets/img/temp3.png" alt="screenshot" class="portfolio-photo"></a>
       </animated-border-wrapper>
 
@@ -68,13 +68,14 @@ export default {
 <style lang="scss">
 
   .portfolio-link {
+    font-size: 1.5rem;
     color: #448aff;
     margin-top: 30px;
     text-align: center;
   }
 
   .portfolio-link a {
-    color: #ffb2ff !important;
+    color: #ec407a !important;
     transition: 0.5s;
     text-decoration: none;
   }

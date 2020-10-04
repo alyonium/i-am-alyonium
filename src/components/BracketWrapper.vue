@@ -26,14 +26,23 @@ export default {
   &_blue {
     color: #448aff;
   }
+  &_light-blue {
+    color: #8c9eff;
+  }
   &_pink {
     color: #a00037;
   }
-  &_shadow-orange {
-    text-shadow: -2px 2px 1px #ff5722;
+  &_purple {
+    color: #7e57c2;
+  }
+  &_shadow-light-pink {
+    text-shadow: -2px 2px 1px #ec407a;
   }
   &_shadow-purple {
     text-shadow: -2px 2px 1px #651fff;
+  }
+  &_shadow-light-blue {
+    text-shadow: -2px 2px 1px #8c9eff;
   }
 }
 @media (max-width: 600px) {

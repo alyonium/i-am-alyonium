@@ -1,22 +1,31 @@
 <template>
   <v-app>
     <v-main>
+      <language-switcher/>
+      <main-content/>
       <about/>
       <portfolio/>
+      <skills/>
     </v-main>
   </v-app>
 </template>
 
 <script>
 import Portfolio from '@/components/Portfolio';
+import Skills from '@/components/Skills';
+import MainContent from '@/components/MainContent';
 import About from './components/About';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default {
   name: 'App',
 
   components: {
+    LanguageSwitcher,
+    MainContent,
     About,
     Portfolio,
+    Skills,
   },
 
   data: () => ({

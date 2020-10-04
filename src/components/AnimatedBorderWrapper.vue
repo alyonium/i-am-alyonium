@@ -40,8 +40,12 @@ export default {
   &_pink-purple {
     border-image: linear-gradient(to left top, #a00037 10%,  transparent 30%, transparent 70%, #651fff 90%) 1;
   }
-  &_orange-blue {
-    border-image: linear-gradient(to left top, #ff5722 10%,  transparent 30%, transparent 70%, #448aff 90%) 1;
+  &_light-pink-blue {
+    border-image: linear-gradient(to left top, #ec407a 10%,  transparent 30%, transparent 70%, #448aff 90%) 1;
+  }
+  &_light-purple {
+    border: 3px solid transparent;
+    border-image: linear-gradient(to left top, #c94f7c 10%,  transparent 30%, transparent 70%, #805acb 90%) 1;
   }
 }
 
