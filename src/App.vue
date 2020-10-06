@@ -6,6 +6,7 @@
       <about/>
       <portfolio/>
       <skills/>
+      <contacts/>
     </v-main>
   </v-app>
 </template>
@@ -14,13 +15,15 @@
 import Portfolio from '@/components/Portfolio';
 import Skills from '@/components/Skills';
 import MainContent from '@/components/MainContent';
-import About from './components/About';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import Contacts from '@/components/Contacts';
+import About from './components/About';
 
 export default {
   name: 'App',
 
   components: {
+    Contacts,
     LanguageSwitcher,
     MainContent,
     About,

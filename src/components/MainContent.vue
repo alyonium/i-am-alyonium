@@ -32,13 +32,13 @@ export default {
 <style lang="scss">
 h1 {
   font-size: 10rem;
-  color: #c94f7c;
+  color: #c94f7c; //pink
   letter-spacing: 5px;
-  text-shadow: 0 0 2px #b64fc8,
-  -4px 5px 0 #805acb,
-  -7px 11px 0 #5870cb,
-  -12px 17px 0 #4d82cb,
-  -17px 23px 0 #49a7cc;
+  text-shadow: 0 0 2px #b64fc8, //light-purple
+  -4px 5px 0 #805acb, //purple
+  -7px 11px 0 #5870cb, //soft-blue
+  -12px 17px 0 #4d82cb, //blue
+  -17px 23px 0 #49a7cc; //light-blue
 }
 
 </style>

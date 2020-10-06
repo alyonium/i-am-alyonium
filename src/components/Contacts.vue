@@ -1,20 +1,20 @@
 <template>
   <v-container
       class="d-flex align-center">
-    <bracket-wrapper title=".Skills" color="light-purple" shadow="shadow-light-orange">
-      <skills-content></skills-content>
+    <bracket-wrapper title=".Contacts" color="light-pink" shadow="shadow-light-blue">
+      <contacts-content></contacts-content>
     </bracket-wrapper>
   </v-container>
 </template>
 
 <script>
 import BracketWrapper from '@/components/BracketWrapper';
-import SkillsContent from '@/components/SkillsContent';
+import ContactsContent from '@/components/ContactsContent';
 
 export default {
-  name: 'Skills',
+  name: 'Contacts',
   components: {
-    SkillsContent,
+    ContactsContent,
     BracketWrapper,
   },
   props: {

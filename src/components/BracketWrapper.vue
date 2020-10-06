@@ -23,26 +23,41 @@ export default {
 <style lang="scss">
 .bracket {
   font-size: 3.5rem;
+
   &_blue {
     color: #448aff;
   }
-  &_light-blue {
-    color: #8c9eff;
-  }
+
   &_pink {
     color: #a00037;
   }
+
+  &_light-pink {
+    color: #c2185b;
+  }
+
   &_purple {
     color: #7e57c2;
   }
+
+  &_light-purple {
+    color: #883997;
+  }
+
   &_shadow-light-pink {
     text-shadow: -2px 2px 1px #ec407a;
   }
+
   &_shadow-purple {
     text-shadow: -2px 2px 1px #651fff;
   }
+
+  &_shadow-light-orange {
+    text-shadow: -2px 2px 1px #ff80ab;
+  }
+
   &_shadow-light-blue {
-    text-shadow: -2px 2px 1px #8c9eff;
+    text-shadow: -2px 2px 1px #ce93d8;
   }
 }
 @media (max-width: 600px) {

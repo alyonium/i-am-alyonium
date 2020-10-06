@@ -7,7 +7,7 @@
       offset-md="1"
       offset="0"
     >
-      <bracket-wrapper title="&html" color="light-blue" shadow="shadow-purple">
+      <bracket-wrapper title="&html" color="light-purple" shadow="shadow-light-orange">
         HTML5<br>
         БЭМ<br>
         Адаптивная верстка<br>
@@ -20,7 +20,7 @@
       offset-md="1"
       offset="0"
     >
-      <bracket-wrapper title="&css" color="light-blue" shadow="shadow-purple">
+      <bracket-wrapper title="&css" color="light-purple" shadow="shadow-light-orange">
         SCSS<br>
         Bootstrap<br>
         Animate.css<br>
@@ -33,7 +33,7 @@
       offset-md="1"
       offset="0"
     >
-      <bracket-wrapper title="&js" color="light-blue" shadow="shadow-purple"></bracket-wrapper>
+      <bracket-wrapper title="&js" color="light-purple" shadow="shadow-light-orange"></bracket-wrapper>
     </v-col>
   </v-row>
 </template>
@@ -49,7 +49,11 @@ export default {
   props: {},
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
+* {
+  color: #448aff;
+}
+
 @media (max-width: 1264px) {
 }
 

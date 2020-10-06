@@ -9,7 +9,7 @@
         offset="0">
 
       <animated-border-wrapper frame-color="light-pink-blue">
-        <a href="https://alyonium.github.io/space/"><img src="../assets/img/temp1.png" alt="screenshot" class="portfolio-photo"></a>
+        <a href="https://alyonium.github.io/space/" class="picture-link"><img src="../assets/img/temp1.png" alt="screenshot" class="portfolio-photo"></a>
       </animated-border-wrapper>
 
     </v-col>
@@ -22,7 +22,7 @@
       offset="0">
 
       <animated-border-wrapper frame-color="light-pink-blue">
-        <a href="https://alyonium.github.io/travel/"><img src="../assets/img/temp2.png" alt="screenshot" class="portfolio-photo"></a>
+        <a href="https://alyonium.github.io/travel/" class="picture-link"><img src="../assets/img/temp2.png" alt="screenshot" class="portfolio-photo"></a>
       </animated-border-wrapper>
 
     </v-col>
@@ -35,7 +35,7 @@
       offset="0">
 
       <animated-border-wrapper frame-color="light-pink-blue">
-        <a href="https://alyonium.github.io/kindergarden/"><img src="../assets/img/temp3.png" alt="screenshot" class="portfolio-photo"></a>
+        <a href="https://alyonium.github.io/kindergarden/" class="picture-link"><img src="../assets/img/temp3.png" alt="screenshot" class="portfolio-photo"></a>
       </animated-border-wrapper>
 
     </v-col>
@@ -72,6 +72,10 @@ export default {
     color: #448aff;
     margin-top: 30px;
     text-align: center;
+  }
+
+  .picture-link {
+    display: flex;
   }
 
   .portfolio-link a {
