@@ -69,6 +69,10 @@ export default {
   background: #000;
 }
 
+.v-textarea textarea {
+  resize: none !important;
+}
+
 @media (max-width: 960px) {
   .container {
     height: auto;
