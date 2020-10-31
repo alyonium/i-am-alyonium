@@ -73,6 +73,11 @@ export default {
   resize: none !important;
 }
 
+.v-snack__wrapper {
+  width: 285px !important;
+  min-width: unset !important;
+}
+
 @media (max-width: 960px) {
   .container {
     height: auto;

@@ -33,15 +33,7 @@ export default {
   }
 
   &_light-pink {
-    color: #c2185b;
-  }
-
-  &_purple {
-    color: #7e57c2;
-  }
-
-  &_light-purple {
-    color: #883997;
+    color: #ec407a;
   }
 
   &_shadow-light-pink {
@@ -52,12 +44,8 @@ export default {
     text-shadow: -2px 2px 1px #651fff;
   }
 
-  &_shadow-light-orange {
-    text-shadow: -2px 2px 1px #ff80ab;
-  }
-
-  &_shadow-light-blue {
-    text-shadow: -2px 2px 1px #ce93d8;
+  &_shadow-blue {
+    text-shadow: -2px 2px 1px #448aff;
   }
 }
 @media (max-width: 600px) {

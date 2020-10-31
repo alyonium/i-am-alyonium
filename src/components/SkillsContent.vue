@@ -7,7 +7,7 @@
       offset-md="1"
       offset="0"
     >
-      <bracket-wrapper title="&html" color="light-purple" shadow="shadow-light-orange">
+      <bracket-wrapper title="&html" color="pink" shadow="shadow-purple">
         HTML5<br>
         БЭМ<br>
         Адаптивная верстка<br>
@@ -20,7 +20,7 @@
       offset-md="1"
       offset="0"
     >
-      <bracket-wrapper title="&css" color="light-purple" shadow="shadow-light-orange">
+      <bracket-wrapper title="&css" color="pink" shadow="shadow-purple">
         SCSS<br>
         Bootstrap<br>
         Animate.css<br>
@@ -33,7 +33,7 @@
       offset-md="1"
       offset="0"
     >
-      <bracket-wrapper title="&js" color="light-purple" shadow="shadow-light-orange"></bracket-wrapper>
+      <bracket-wrapper title="&js" color="pink" shadow="shadow-purple"></bracket-wrapper>
     </v-col>
   </v-row>
 </template>
