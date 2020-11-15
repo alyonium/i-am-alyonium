@@ -182,5 +182,8 @@ span {
       margin: 10px 20px 30px 10px;
     }
   }
+  a {
+    font-size: 20px;
+  }
 }
 </style>

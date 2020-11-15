@@ -2,11 +2,13 @@
   <v-col
     cols="12"
   >
+    <div>
     <h2 class="bracket"
         :class="{[`bracket_${color}`]: true, [`bracket_${shadow}`]: true, [`${size}`]: true}">{{ title }} {</h2>
     <slot></slot>
     <p class="bracket"
        :class="{[`bracket_${color}`]: true, [`bracket_${shadow}`]: true, [`${size}`]: true}">}</p>
+    </div>
   </v-col>
 </template>
 
@@ -53,15 +55,31 @@ export default {
       text-shadow: -2px 2px 1px #448aff;
     }
 }
+
+@media (max-width: 1264px) {
+  .bracket {
+    &.small {
+      font-size: 2.1rem;
+    }
+  }
+}
+
 @media (max-width: 600px) {
   .bracket {
-    font-size: 3rem;
+    &.big {
+      font-size: 3rem;
+    }
   }
 }
 
 @media (max-width: 400px) {
   .bracket {
-    font-size: 2.3rem;
+    &.big {
+      font-size: 2.3rem;
+    }
+    &.small {
+      font-size: 1.6rem;
+    }
   }
 }
 </style>
