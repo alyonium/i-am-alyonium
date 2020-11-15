@@ -56,7 +56,7 @@ export default {
 <style lang="scss" scoped>
 h3 {
   padding-left: 0 !important;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-shadow: -1px 1px 1px #448aff;
 }
 
@@ -65,6 +65,7 @@ h3 {
 }
 
 a {
+  font-size: 1.4rem;
   text-decoration: none;
   color: #ec407a !important;
   text-shadow: -1px 1px 1px #448aff;
@@ -83,7 +84,7 @@ span {
   width: 32px;
   height: 32px;
   left: 0;
-  top: -3px;
+  top: 2px;
   background: url(../assets/img/icons/github.png) center 0 no-repeat;
 }
 
@@ -93,7 +94,7 @@ span {
   width: 32px;
   height: 32px;
   left: 0;
-  top: -3px;
+  top: 3px;
   background: url(../assets/img/icons/telegram.png) center 0 no-repeat;
 }
 
@@ -103,7 +104,7 @@ span {
   width: 32px;
   height: 32px;
   left: 0;
-  top: 0;
+  top: 7px;
   background: url(../assets/img/icons/google-plus.png) center 0 no-repeat;
 }
 
@@ -113,7 +114,7 @@ span {
   width: 32px;
   height: 32px;
   left: 0;
-  top: -8px;
+  top: -2px;
   background: url(../assets/img/icons/linkedin.png) center 0 no-repeat;
 }
 
@@ -123,7 +124,7 @@ span {
   width: 32px;
   height: 32px;
   left: 0;
-  top: 3px;
+  top: 8px;
   background: url(../assets/img/icons/vk.png) center 0 no-repeat;
 }
 
@@ -133,7 +134,7 @@ span {
   width: 32px;
   height: 32px;
   left: 0;
-  top: -3px;
+  top: 2px;
   background: url(../assets/img/icons/skype.png) center 0 no-repeat;
 }
 

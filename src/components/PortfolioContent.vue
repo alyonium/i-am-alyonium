@@ -72,6 +72,7 @@ export default {
     color: #448aff;
     margin-top: 30px;
     text-align: center;
+    text-shadow: -1px 1px 1px #ec407a;
   }
 
   .picture-link {

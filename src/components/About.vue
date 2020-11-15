@@ -1,7 +1,7 @@
 <template>
   <v-container
       class="d-flex align-center">
-    <bracket-wrapper title=".About" color="pink" shadow="shadow-purple">
+    <bracket-wrapper title=".About" color="pink" shadow="shadow-purple" size="big">
       <about-content></about-content>
     </bracket-wrapper>
   </v-container>

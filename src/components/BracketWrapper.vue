@@ -3,10 +3,10 @@
     cols="12"
   >
     <h2 class="bracket"
-        :class="{[`bracket_${color}`]: true, [`bracket_${shadow}`]: true}">{{ title }} {</h2>
+        :class="{[`bracket_${color}`]: true, [`bracket_${shadow}`]: true, [`${size}`]: true}">{{ title }} {</h2>
     <slot></slot>
     <p class="bracket"
-       :class="{[`bracket_${color}`]: true, [`bracket_${shadow}`]: true}">}</p>
+       :class="{[`bracket_${color}`]: true, [`bracket_${shadow}`]: true, [`${size}`]: true}">}</p>
   </v-col>
 </template>
 
@@ -17,36 +17,41 @@ export default {
     title: String,
     color: String,
     shadow: String,
+    size: String,
   },
 };
 </script>
 <style lang="scss">
 .bracket {
-  font-size: 3.5rem;
-
-  &_blue {
-    color: #448aff;
+  &.big {
+    font-size: 3.5rem;
   }
-
-  &_pink {
-    color: #a00037;
+  &.small {
+    font-size: 2.7rem;
   }
+    &_blue {
+      color: #448aff;
+    }
 
-  &_light-pink {
-    color: #ec407a;
-  }
+    &_pink {
+      color: #a00037;
+    }
 
-  &_shadow-light-pink {
-    text-shadow: -2px 2px 1px #ec407a;
-  }
+    &_light-pink {
+      color: #ec407a;
+    }
 
-  &_shadow-purple {
-    text-shadow: -2px 2px 1px #651fff;
-  }
+    &_shadow-light-pink {
+      text-shadow: -2px 2px 1px #ec407a;
+    }
 
-  &_shadow-blue {
-    text-shadow: -2px 2px 1px #448aff;
-  }
+    &_shadow-purple {
+      text-shadow: -2px 2px 1px #651fff;
+    }
+
+    &_shadow-blue {
+      text-shadow: -2px 2px 1px #448aff;
+    }
 }
 @media (max-width: 600px) {
   .bracket {

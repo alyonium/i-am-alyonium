@@ -53,6 +53,7 @@ export default {
     color: #b388ff;
     padding-left: 40px;
     margin-bottom: 0 !important;
+    text-shadow: -1px 1px 1px #c2185b;
   }
 
   .photo {
