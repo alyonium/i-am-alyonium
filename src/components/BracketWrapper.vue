@@ -87,8 +87,8 @@ export default {
     &.big {
       font-size: 2.3rem;
     }
-
-    &.small {
+    &_shadow-pink.small {
+      text-shadow: -1px 1px 1px #a00037;
       font-size: 1.6rem;
     }
   }

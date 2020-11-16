@@ -1,5 +1,14 @@
 <i18n>
-{}
+{
+  "ru": {
+    "yandex-maps": "Яндекс.карты",
+    "bem": "БЭМ"
+  },
+  "en": {
+    "yandex-maps": "Yandex.maps",
+    "bem": "BEM"
+  }
+}
 </i18n>
 <template>
   <v-row
@@ -11,7 +20,7 @@
       offset="0"
     >
       <bracket-wrapper title="#front + #back" color="purple" shadow="shadow-pink" size="small">
-        <p>HTML5, БЭМ<br>
+        <p>HTML5, {{ $t('bem') }}<br>
           CSS3, SCSS<br>
           JavaScript (ES6)<br>
           Bootstrap, Jquery<br>
@@ -45,7 +54,7 @@
           English B1<br>
           Github, Bitbucket<br>
           Npm, Yarn<br>
-          Yandex.maps<br>
+          {{ $t('yandex-maps') }}<br>
         </p>
       </bracket-wrapper>
     </v-col>
@@ -70,8 +79,13 @@ export default {
 }
 
 .emoji {
+  transition: 0.2s;
   font-size: 3.5rem;
   margin-bottom: 20px;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
 }
 
 p {
@@ -89,6 +103,9 @@ p {
 }
 
 @media (max-width: 1264px) {
+  .emoji:hover {
+    transform: unset;
+  }
 }
 
 @media (max-width: 959px) {

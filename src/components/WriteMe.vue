@@ -1,3 +1,17 @@
+<i18n>
+{
+  "ru": {
+    "success-message": "Ваше сообщение отправлено",
+    "placeholder-message": "Сообщение",
+    "button-sent": "Отправить"
+  },
+  "en": {
+    "success-message": "Message sent successfully",
+    "placeholder-message": "Message",
+    "button-sent": "Sent"
+  }
+}
+</i18n>
 <template>
     <v-card
     class="myCard">
@@ -8,7 +22,7 @@
       right
       color="purple lighten-3"
     >
-      <span>Message sent successfully!🥰</span>
+      <span>{{ $t('success-message') }}!🥰</span>
     </v-snackbar>
     <v-form
       ref="form"
@@ -36,7 +50,7 @@
             >
               <template v-slot:label>
                 <div>
-                  Message
+                  {{ $t('placeholder-message') }}
                 </div>
               </template>
             </v-textarea>
@@ -49,7 +63,7 @@
               type="submit"
               @click="validate"
             >
-              Sent
+              {{ $t('button-sent') }}
             </v-btn>
           </v-card-actions>
         </v-row>
@@ -71,9 +85,9 @@ export default {
     return {
       form: { ...defaultForm },
       rules: {
-        email: [(val) => (val || '').length > 0 || 'This field is required',
-          (val) => emailRegExp.test(val) || 'This field is incorrect'],
-        message: [(val) => (val || '').length > 0 || 'This field is required'],
+        email: [(val) => (val || '').length > 0 || '❗❗❗',
+          (val) => emailRegExp.test(val) || '❌'],
+        message: [(val) => (val || '').length > 0 || '❗❗❗'],
       },
       snackbar: false,
       valid: true,

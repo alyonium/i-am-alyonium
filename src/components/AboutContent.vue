@@ -1,3 +1,23 @@
+<i18n>
+{
+  "ru": {
+    "name": "Алёна",
+    "age": "лет",
+    "country": "Россия",
+    "city": "Санкт-Петербург",
+    "university": "БГТУ \"Военмех\"",
+    "experience": "год"
+  },
+  "en": {
+    "name": "Alona",
+    "age": "y/o",
+    "country": "Russia",
+    "city": "Saint-Petersburg",
+    "university": "BSTU \"Voenmeh\"",
+    "experience": "year"
+  }
+}
+</i18n>
 <template>
   <v-row
     class="no-gutters pt-8 pb-5 pa-0">
@@ -9,12 +29,12 @@
         order="2">
       <p
         class="slide-text">
-        💅🏼 Алёна<br>
-        🎂 19 лет<br>
-        🌏 Россия, <nobr>Санкт-Петербург</nobr><br>
-        👩‍🏫 БГТУ "Военмех"<br>
+        💅🏼 {{ $t('name') }}<br>
+        🎂 19 {{ $t('age') }}<br>
+        🌏 {{ $t('country') }}, <nobr>{{ $t('city') }}</nobr><br>
+        👩‍🏫 {{ $t('university') }}<br>
         ❤️ frontend<br>
-        👩‍💻 1 год<br>
+        👩‍💻 1 {{ $t('experience') }}<br>
         👄 🇷🇺 🇺🇸<br>
       </p>
     </v-col>
@@ -36,14 +56,6 @@
 
 <script>
 import AnimatedBorderWrapper from '@/components/AnimatedBorderWrapper';
-
-// const messages = {
-//   en: {
-//     message: {
-//       hello: '{hello} world',
-//     },
-//   },
-// };
 
 export default {
   name: 'AboutContent',

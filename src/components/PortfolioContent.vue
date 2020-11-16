@@ -1,3 +1,15 @@
+<i18n>
+{
+  "ru": {
+    "portfolio": "Больше моих работ можно найти",
+    "portfolio-link": "здесь"
+  },
+  "en": {
+    "portfolio": "You can find more my works",
+    "portfolio-link": "here"
+  }
+}
+</i18n>
 <template>
   <v-row
     class="no-gutters pt-8 pb-5 pa-0">
@@ -48,7 +60,7 @@
       offset-sm="0"
       offset-xs="0"
       class="d-flex justify-center align-center">
-      <p class="portfolio-link">Больше моих работ можно найти <nobr><a href="#">здесь</a> 🍓</nobr> </p>
+      <p class="portfolio-link">{{ $t('portfolio') }} <nobr><a href="#">{{ $t('portfolio-link') }}</a> 🍓</nobr> </p>
     </v-col>
   </v-row>
 </template>
@@ -83,6 +95,7 @@ export default {
     color: #ec407a !important;
     transition: 0.2s;
     text-decoration: none;
+    border-bottom: 2px solid rgba(68, 138, 255, 0);
   }
 
   .portfolio-link a:hover,
@@ -90,6 +103,7 @@ export default {
     transition: 0.5s;
     color: #c62828 !important;
     text-decoration: none;
+    border-bottom: 2px solid rgba(68, 138, 255, 1);
   }
 
   .portfolio-photo {
@@ -133,6 +147,11 @@ export default {
       margin-top: 40px;
       margin-bottom: 20px !important;
       padding-left: 20px;
+    }
+
+    .portfolio-link a:hover,
+    .portfolio-link a:active {
+      border-bottom: 2px solid rgba(68, 138, 255, 0);
     }
   }
 

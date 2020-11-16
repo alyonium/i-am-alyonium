@@ -75,6 +75,17 @@ h1 {
 }
 
 @media (max-width: 400px) {
+  h1 {
+    padding-left: 5px;
+    font-size: 3.5rem;
+    color: #c94f7c; //pink
+    letter-spacing: 5px;
+    text-shadow: 0 0 2px #b64fc8,
+    -2px 4px 0 #805acb,
+    -3px 8px 0 #5870cb,
+    -5px 12px 0 #4d82cb,
+    -6px 16px 0 #49a7cc;
+  }
 }
 
 </style>
