@@ -8,7 +8,7 @@ Vue.config.productionTip = false;
 
 const i18n = new VueI18n({
   locale: 'ru', // установка локализации по умолчанию
-})
+});
 
 new Vue({
   vuetify,

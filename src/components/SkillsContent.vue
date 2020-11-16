@@ -1,3 +1,6 @@
+<i18n>
+{}
+</i18n>
 <template>
   <v-row
     class="no-gutters pt-md-8 pt-sm-4 pt-2 pb-5 pa-0 d-sm-flex justify-sm-center col-content">
@@ -7,7 +10,7 @@
       offset-md="1"
       offset="0"
     >
-      <bracket-wrapper title="#front + #back" color="pink" shadow="shadow-purple" size="small">
+      <bracket-wrapper title="#front + #back" color="purple" shadow="shadow-pink" size="small">
         <p>HTML5, БЭМ<br>
           CSS3, SCSS<br>
           JavaScript (ES6)<br>
@@ -36,7 +39,7 @@
       offset-md="0"
       offset="0"
     >
-      <bracket-wrapper title="&.also" color="pink" shadow="shadow-purple" size="small">
+      <bracket-wrapper title="&.also" color="purple" shadow="shadow-pink" size="small">
         <p>Figma, Photoshop<br>
           Git, Subversion<br>
           English B1<br>
@@ -63,7 +66,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 * {
-  color: #448aff;
+  color: #b388ff;
 }
 
 .emoji {

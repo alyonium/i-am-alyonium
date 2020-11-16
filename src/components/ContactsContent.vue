@@ -1,3 +1,14 @@
+<i18n>
+{
+  "ru": {
+    "text-me": "Напиши мне"
+  },
+  "en": {
+    "text-me": "Text me"
+  }
+}
+</i18n>
+
 <template>
   <v-row
     class="no-gutters pt-8 pb-5 pa-0">
@@ -34,9 +45,9 @@
       offset-sm="0"
       cols="12"
       offset="0"
-      class="d-flex justify-center flex-column align-center"
+      class="d-flex justify-center flex-column align-center mt-md-0 mt-sm-0 mt-xs-8 mt-8 "
     >
-      <h3>Напиши мне! 💌</h3>
+      <h3>{{ $t('text-me') }}! 💌</h3>
       <write-me></write-me>
     </v-col>
   </v-row>
@@ -155,6 +166,17 @@ span {
 }
 
 @media (max-width: 1264px) {
+  #telegram,
+  #gmail,
+  #linkedin,
+  #vk,
+  #skype,
+  #github {
+    &:hover {
+      transform: unset;
+      transition: unset;
+    }
+  }
 }
 
 @media (max-width: 959px) {
@@ -163,7 +185,7 @@ span {
 @media (max-width: 599px) {
   .social-media {
     & span {
-      margin: 10px 20px 30px;
+      margin: 10px 90px 20px 0;
     }
   }
 }
@@ -171,7 +193,7 @@ span {
 @media (max-width: 467px) {
   .social-media {
     & span {
-      margin: 10px 30px 30px 10px
+      margin: 10px 50px 10px 0;
     }
   }
 }
@@ -179,7 +201,7 @@ span {
 @media (max-width: 399px) {
   .social-media {
     & span {
-      margin: 10px 20px 30px 10px;
+      margin: 10px 30px 10px 0;
     }
   }
   a {

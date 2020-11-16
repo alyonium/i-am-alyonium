@@ -81,7 +81,7 @@ export default {
 
   .portfolio-link a {
     color: #ec407a !important;
-    transition: 0.5s;
+    transition: 0.2s;
     text-decoration: none;
   }
 
@@ -134,10 +134,6 @@ export default {
       margin-bottom: 20px !important;
       padding-left: 20px;
     }
-
-    #romb6 {
-      display: block;
-    }
   }
 
   @media (max-width: 959px) {
@@ -162,6 +158,10 @@ export default {
       width: 300px;
       height: 300px;
     }
+
+    .portfolio-link {
+      max-width: 350px;
+    }
   }
 
   @media (max-width: 399px) {
@@ -174,13 +174,6 @@ export default {
     .portfolio-photo {
       width: 290px;
       height: 290px;
-    }
-
-    #romb6 {
-      width: 35%;
-      height: 35%;
-      right: -20px;
-      bottom: -35px;
     }
   }
 </style>

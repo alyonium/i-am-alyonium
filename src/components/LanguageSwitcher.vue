@@ -1,14 +1,3 @@
-<i18n>
-{
-"en": {
-"hello": "hello world!"
-},
-"ru": {
-"hello": "Привет мир!"
-}
-}
-</i18n>
-
 <template>
     <animated-border-wrapper
       frame-color="light-purple"
@@ -39,7 +28,6 @@ export default {
   watch: {
     locale(val) {
       this.$i18n.locale = val;
-      console.log(val);
     },
   },
 };

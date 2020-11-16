@@ -29,7 +29,6 @@
         order="1">
       <animated-border-wrapper frame-color="pink-purple" style="position: relative">
         <img src="../assets/img/myFace.jpeg" alt="it's me" class="photo">
-        <img src="../assets/img/romb6.png" alt="romb" id="romb6">
       </animated-border-wrapper>
     </v-col>
   </v-row>
@@ -37,6 +36,14 @@
 
 <script>
 import AnimatedBorderWrapper from '@/components/AnimatedBorderWrapper';
+
+// const messages = {
+//   en: {
+//     message: {
+//       hello: '{hello} world',
+//     },
+//   },
+// };
 
 export default {
   name: 'AboutContent',
@@ -70,15 +77,6 @@ export default {
     border: 8px solid transparent;
   }
 
-  #romb6 {
-    position: absolute;
-    right: -45px;
-    width: 40%;
-    bottom: -45px;
-    height: 40%;
-    display: none;
-  }
-
   @media (max-width: 1264px) {
     .photo {
       width: 300px;
@@ -88,7 +86,8 @@ export default {
       box-shadow: 0 0 10px 2px #651fff;
       &:hover {
         transform: none;
-        border: 1px solid #651fff;
+        border:  2px solid #651fff;
+        transition: none;
       }
     }
     .slide-text {
@@ -98,9 +97,6 @@ export default {
       padding-left: 20px;
     }
 
-    #romb6 {
-      display: block;
-    }
   }
 
   @media (max-width: 959px) {
@@ -139,11 +135,5 @@ export default {
       height: 290px;
     }
 
-    #romb6 {
-      width: 35%;
-      height: 35%;
-      right: -20px;
-      bottom: -35px;
-    }
   }
 </style>
