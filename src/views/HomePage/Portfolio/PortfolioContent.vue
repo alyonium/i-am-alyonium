@@ -60,7 +60,11 @@
       offset-sm="0"
       offset-xs="0"
       class="d-flex justify-center align-center">
-      <p class="portfolio-link">{{ $t('portfolio') }} <nobr><a href="#">{{ $t('portfolio-link') }}</a> 🍓</nobr> </p>
+      <p class="portfolio-link">{{ $t('portfolio') }} <nobr>
+        <router-link to="/portfolio">
+          <a href="#">{{ $t('portfolio-link') }}</a>
+        </router-link>
+        🍓</nobr> </p>
     </v-col>
   </v-row>
 </template>

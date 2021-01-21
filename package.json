@@ -10,7 +10,9 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-fragment": "^1.5.1",
     "vue-i18n": "^8.21.1",
+    "vue-router": "^3.4.9",
     "vuetify": "^2.2.11"
   },
   "devDependencies": {

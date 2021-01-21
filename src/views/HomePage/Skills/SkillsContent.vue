@@ -83,6 +83,7 @@ export default {
   transition: 0.2s;
   font-size: 3.5rem;
   margin-bottom: 20px;
+  cursor: default;
   &:hover {
     transform: scale(1.1);
     transition: 0.2s;

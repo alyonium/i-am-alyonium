@@ -9,7 +9,7 @@
 
 <script>
 import BracketWrapper from '@/components/BracketWrapper';
-import SkillsContent from '@/views/AlyoniumPage/Skills/SkillsContent';
+import SkillsContent from '@/views/HomePage/Skills/SkillsContent';
 
 export default {
   name: 'Skills',

@@ -2,38 +2,19 @@
   <v-app>
     <v-main>
       <language-switcher/>
-      <main-content name="ALYONIUM"/>
-      <about/>
-      <portfolio/>
-      <skills/>
-      <contacts/>
+      <router-view/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Portfolio from '@/views/AlyoniumPage/Portfolio/Portfolio';
-import Skills from '@/views/AlyoniumPage/Skills/Skills';
-import MainContent from '@/components/MainContent';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import Contacts from '@/views/AlyoniumPage/Contacts/Contacts';
-import About from './views/AlyoniumPage/About/About';
 
 export default {
   name: 'App',
-
   components: {
-    Contacts,
     LanguageSwitcher,
-    MainContent,
-    About,
-    Portfolio,
-    Skills,
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
 

@@ -1,30 +1,24 @@
 <template>
   <v-container
       class="d-flex align-center">
-    <bracket-wrapper title=".About" size="big">
-      <about-content></about-content>
+    <bracket-wrapper title=".Portfolio" size="big">
+      <portfolio-content></portfolio-content>
     </bracket-wrapper>
   </v-container>
 </template>
 
 <script>
 import BracketWrapper from '@/components/BracketWrapper';
-import AboutContent from '@/views/AlyoniumPage/About/AboutContent';
+import PortfolioContent from '@/views/HomePage/Portfolio/PortfolioContent';
 
 export default {
   name: 'About',
   components: {
     BracketWrapper,
-    AboutContent,
-  },
-  props: {
-  },
-  data() {
-    return {
-    };
+    PortfolioContent,
   },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 </style>

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import App from './App';
+import router from './router';
 import vuetify from './plugins/vuetify';
 
 Vue.use(VueI18n);
@@ -11,6 +12,7 @@ const i18n = new VueI18n({
 });
 
 new Vue({
+  router,
   vuetify,
   i18n,
   render: (h) => h(App),

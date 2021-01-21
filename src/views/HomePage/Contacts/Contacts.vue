@@ -9,7 +9,7 @@
 
 <script>
 import BracketWrapper from '@/components/BracketWrapper';
-import ContactsContent from '@/views/AlyoniumPage/Contacts/ContactsContent';
+import ContactsContent from '@/views/HomePage/Contacts/ContactsContent';
 
 export default {
   name: 'Contacts',
