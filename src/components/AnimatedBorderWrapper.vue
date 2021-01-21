@@ -1,7 +1,7 @@
 <template>
   <div
     class="d-flex align-center justify-center"
-    :class="{'animated-border': deviceScreenHeight(), [`animated-border_${frameColor}`]: isAnimate}">
+    :class="{'animated-border': deviceScreenHeight(), [`animated-border_pink-purple`]: isAnimate}">
     <slot></slot>
   </div>
 </template>
@@ -33,19 +33,14 @@ export default {
 
 </script>
 <style scoped lang="scss">
+@import '~vuetify/src/styles/styles.sass';
 
 .animated-border {
   position: relative;
   border: 5px solid transparent;
   &_pink-purple {
-    border-image: linear-gradient(to left top, #a00037 10%,  transparent 30%, transparent 70%, #651fff 90%) 1;
-  }
-  &_light-pink-blue {
-    border-image: linear-gradient(to left top, #ec407a 10%,  transparent 30%, transparent 70%, #448aff 90%) 1;
-  }
-  &_light-purple {
-    border: 3px solid transparent;
-    border-image: linear-gradient(to left top, #c94f7c 10%,  transparent 30%, transparent 70%, #805acb 90%) 1;
+    border-image: linear-gradient(to left top, map-get($pink, darken-3) 10%,
+      transparent 30%, transparent 70%, map-get($deep-purple, darken-3) 90%) 1;
   }
 }
 

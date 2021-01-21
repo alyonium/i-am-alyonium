@@ -20,8 +20,8 @@
         offset-md="1"
         offset="0">
 
-      <animated-border-wrapper frame-color="light-pink-blue">
-        <a href="https://alyonium.github.io/space/" class="picture-link"><img src="../assets/img/temp1.png" alt="screenshot" class="portfolio-photo"></a>
+      <animated-border-wrapper>
+        <a href="https://alyonium.github.io/space/" class="picture-link d-flex"><img src="../../../assets/img/temp1.png" alt="screenshot" class="portfolio-photo"></a>
       </animated-border-wrapper>
 
     </v-col>
@@ -33,8 +33,8 @@
       offset-md="1"
       offset="0">
 
-      <animated-border-wrapper frame-color="light-pink-blue">
-        <a href="https://alyonium.github.io/travel/" class="picture-link"><img src="../assets/img/temp2.png" alt="screenshot" class="portfolio-photo"></a>
+      <animated-border-wrapper>
+        <a href="https://alyonium.github.io/travel/" class="picture-link d-flex"><img src="../../../assets/img/temp2.png" alt="screenshot" class="portfolio-photo"></a>
       </animated-border-wrapper>
 
     </v-col>
@@ -46,8 +46,8 @@
       offset-md="1"
       offset="0">
 
-      <animated-border-wrapper frame-color="light-pink-blue">
-        <a href="https://alyonium.github.io/kindergarden/" class="picture-link"><img src="../assets/img/temp3.png" alt="screenshot" class="portfolio-photo"></a>
+      <animated-border-wrapper>
+        <a href="https://alyonium.github.io/kindergarden/" class="picture-link d-flex"><img src="../../../assets/img/temp3.png" alt="screenshot" class="portfolio-photo"></a>
       </animated-border-wrapper>
 
     </v-col>
@@ -73,37 +73,30 @@ export default {
   components: {
     AnimatedBorderWrapper,
   },
-  props: {
-  },
 };
 </script>
 <style lang="scss">
+@import '~vuetify/src/styles/styles.sass';
 
   .portfolio-link {
     font-size: 1.5rem;
-    color: #448aff;
+    color: map-get($deep-purple, accent-1);
     margin-top: 30px;
     text-align: center;
-    text-shadow: -1px 1px 1px #ec407a;
-  }
-
-  .picture-link {
-    display: flex;
+    text-shadow: -1px 1px 1px map-get($pink, darken-3);
   }
 
   .portfolio-link a {
-    color: #ec407a !important;
+    color: map-get($pink, lighten-3) !important;
     transition: 0.2s;
     text-decoration: none;
-    border-bottom: 2px solid rgba(68, 138, 255, 0);
   }
 
   .portfolio-link a:hover,
   .portfolio-link a:active {
     transition: 0.5s;
-    color: #c62828 !important;
+    color: map-get($pink, darken-3) !important;
     text-decoration: none;
-    border-bottom: 2px solid rgba(68, 138, 255, 1);
   }
 
   .portfolio-photo {
@@ -120,25 +113,16 @@ export default {
     border: 8px solid transparent;
   }
 
-  #romb6 {
-    position: absolute;
-    right: -45px;
-    width: 40%;
-    bottom: -45px;
-    height: 40%;
-    display: none;
-  }
-
   @media (max-width: 1264px) {
     .portfolio-photo {
       width: 250px;
       height: 250px;
-      border: 2px solid #448aff;
-      box-shadow: 0 0 10px 2px #448aff;
+      border: 2px solid map-get($deep-purple, accent-1);
+      box-shadow: 0 0 10px 2px map-get($deep-purple, accent-1);
       margin-top: 20px;
       &:hover {
         transform: none;
-        border: 2px solid #448aff;
+        border: 2px solid map-get($deep-purple, accent-1);
       }
     }
 
@@ -147,11 +131,6 @@ export default {
       margin-top: 40px;
       margin-bottom: 20px !important;
       padding-left: 20px;
-    }
-
-    .portfolio-link a:hover,
-    .portfolio-link a:active {
-      border-bottom: 2px solid rgba(68, 138, 255, 0);
     }
   }
 

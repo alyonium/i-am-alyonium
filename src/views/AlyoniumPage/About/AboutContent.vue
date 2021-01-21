@@ -30,7 +30,7 @@
       <p
         class="slide-text">
         💅🏼 {{ $t('name') }}<br>
-        🎂 19 {{ $t('age') }}<br>
+        🎂 20 {{ $t('age') }}<br>
         🌏 {{ $t('country') }}, <nobr>{{ $t('city') }}</nobr><br>
         👩‍🏫 {{ $t('university') }}<br>
         ❤️ frontend<br>
@@ -47,8 +47,8 @@
         class="d-flex justify-center align-center"
         order-md="2"
         order="1">
-      <animated-border-wrapper frame-color="pink-purple" style="position: relative">
-        <img src="../assets/img/myFace.jpeg" alt="it's me" class="photo">
+      <animated-border-wrapper style="position: relative">
+        <img src="../../../assets/img/myFace.jpeg" alt="it's me" class="photo">
       </animated-border-wrapper>
     </v-col>
   </v-row>
@@ -62,17 +62,17 @@ export default {
   components: {
     AnimatedBorderWrapper,
   },
-  props: {
-  },
 };
 </script>
 <style lang="scss">
+@import '~vuetify/src/styles/styles.sass';
+
   .slide-text {
     font-size: 2.4rem;
-    color: #b388ff;
+    color: map-get($deep-purple, accent-1);
     padding-left: 40px;
     margin-bottom: 0 !important;
-    text-shadow: -1px 1px 1px #c2185b;
+    text-shadow: -1px 1px 1px map-get($pink, darken-3);
   }
 
   .photo {
@@ -146,6 +146,5 @@ export default {
       width: 290px;
       height: 290px;
     }
-
   }
 </style>

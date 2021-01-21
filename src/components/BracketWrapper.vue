@@ -3,11 +3,11 @@
     cols="12"
   >
     <div>
-      <h2 class="bracket"
-          :class="{[`bracket_${color}`]: true, [`bracket_${shadow}`]: true, [`${size}`]: true}">{{ title }} {</h2>
+      <h2 class="bracket bracket_pink bracket_shadow-purple"
+          :class="{[`${size}`]: true}">{{ title }} {</h2>
       <slot></slot>
-      <p class="bracket"
-         :class="{[`bracket_${color}`]: true, [`bracket_${shadow}`]: true, [`${size}`]: true}">}</p>
+      <p class="bracket bracket_pink bracket_shadow-purple"
+         :class="{[`${size}`]: true}">}</p>
     </div>
   </v-col>
 </template>
@@ -17,13 +17,13 @@ export default {
   name: 'BracketWrapper',
   props: {
     title: String,
-    color: String,
-    shadow: String,
     size: String,
   },
 };
 </script>
 <style lang="scss">
+@import '~vuetify/src/styles/styles.sass';
+
 .bracket {
   &.big {
     font-size: 3.5rem;
@@ -33,36 +33,12 @@ export default {
     font-size: 2.7rem;
   }
 
-  &_blue {
-    color: #448aff;
-  }
-
   &_pink {
-    color: #a00037;
-  }
-
-  &_purple {
-    color: #651fff;
-  }
-
-  &_light-pink {
-    color: #ec407a;
-  }
-
-  &_shadow-light-pink {
-    text-shadow: -2px 2px 1px #ec407a;
+    color: map-get($pink, darken-3);
   }
 
   &_shadow-purple {
     text-shadow: -2px 2px 1px #651fff;
-  }
-
-  &_shadow-blue {
-    text-shadow: -2px 2px 1px #448aff;
-  }
-
-  &_shadow-pink {
-    text-shadow: -2px 2px 1px #a00037;
   }
 }
 

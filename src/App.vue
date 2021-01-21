@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <language-switcher/>
-      <main-content/>
+      <main-content name="ALYONIUM"/>
       <about/>
       <portfolio/>
       <skills/>
@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import Portfolio from '@/components/Portfolio';
-import Skills from '@/components/Skills';
+import Portfolio from '@/views/AlyoniumPage/Portfolio/Portfolio';
+import Skills from '@/views/AlyoniumPage/Skills/Skills';
 import MainContent from '@/components/MainContent';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import Contacts from '@/components/Contacts';
-import About from './components/About';
+import Contacts from '@/views/AlyoniumPage/Contacts/Contacts';
+import About from './views/AlyoniumPage/About/About';
 
 export default {
   name: 'App',

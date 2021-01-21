@@ -13,32 +13,24 @@
 export default {
   name: 'MainContent',
   components: {},
-  props: {},
-  data() {
-    return {
-      name: 'ALY0NIUM',
-    };
-  },
-  methods: {
-    typeText() {
-    },
-  },
-  created() {
-    this.typeText();
+  props: {
+    name: String,
   },
 };
 </script>
 
 <style lang="scss">
+@import '~vuetify/src/styles/styles.sass';
+
 h1 {
   font-size: 10rem;
-  color: #c94f7c; //pink
+  color: map-get($pink, lighten-2); //pink
   letter-spacing: 5px;
-  text-shadow: 0 0 2px #b64fc8, //light-purple
-  -4px 5px 0 #805acb, //purple
-  -7px 11px 0 #5870cb, //soft-blue
-  -12px 17px 0 #4d82cb, //blue
-  -17px 23px 0 #49a7cc; //light-blue
+  text-shadow: 0 0 2px map-get($purple, lighten-2), //light-purple
+  -4px 5px 0 map-get($deep-purple, lighten-2), //purple
+  -7px 11px 0 map-get($blue, darken-1), //soft-blue
+  -12px 17px 0 map-get($light-blue, darken-1), //blue
+  -17px 23px 0 map-get($cyan, lighten-1); //light-blue
 }
 
 @media (max-width: 1264px) {
@@ -51,26 +43,26 @@ h1 {
 
   h1 {
     font-size: 6rem;
-    color: #c94f7c; //pink
+    color: map-get($pink, lighten-2); //pink
     letter-spacing: 5px;
-    text-shadow: 0 0 1px #b64fc8, //light-purple
-    -2px 3px 0 #805acb, //purple
-    -3px 8px 0 #5870cb, //soft-blue
-    -8px 13px 0 #4d82cb, //blue
-    -13px 20px 0 #49a7cc; //light-blue
+    text-shadow: 0 0 1px map-get($purple, lighten-2), //light-purple
+    -2px 3px 0 map-get($deep-purple, lighten-2), //purple
+    -3px 8px 0 map-get($blue, darken-1), //soft-blue
+    -8px 13px 0 map-get($light-blue, darken-1), //blue
+    -13px 20px 0 map-get($cyan, lighten-2); //light-blue
   }
 }
 
 @media (max-width: 600px) {
   h1 {
     font-size: 4rem;
-    color: #c94f7c; //pink
+    color: map-get($pink, lighten-2); //pink
     letter-spacing: 5px;
-    text-shadow: 0 0 2px #b64fc8,
-    -2px 4px 0 #805acb,
-    -3px 8px 0 #5870cb,
-    -5px 12px 0 #4d82cb,
-    -6px 16px 0 #49a7cc;
+    text-shadow: 0 0 2px map-get($purple, lighten-2),
+    -2px 4px 0 map-get($deep-purple, lighten-2),
+    -3px 8px 0 map-get($blue, darken-1),
+    -5px 12px 0 map-get($light-blue, darken-1),
+    -6px 16px 0 map-get($cyan, lighten-2);
   }
 }
 
@@ -78,13 +70,13 @@ h1 {
   h1 {
     padding-left: 5px;
     font-size: 3.5rem;
-    color: #c94f7c; //pink
+    color: map-get($pink, lighten-2); //pink
     letter-spacing: 5px;
-    text-shadow: 0 0 2px #b64fc8,
-    -2px 4px 0 #805acb,
-    -3px 8px 0 #5870cb,
-    -5px 12px 0 #4d82cb,
-    -6px 16px 0 #49a7cc;
+    text-shadow: 0 0 2px map-get($purple, lighten-2),
+    -2px 4px 0 map-get($deep-purple, lighten-2),
+    -3px 8px 0 map-get($blue, darken-1),
+    -5px 12px 0 map-get($light-blue, darken-1),
+    -6px 16px 0 map-get($cyan, lighten-2);
   }
 }
 

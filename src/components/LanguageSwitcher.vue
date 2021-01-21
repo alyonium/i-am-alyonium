@@ -1,6 +1,5 @@
 <template>
     <animated-border-wrapper
-      frame-color="light-purple"
       class="switcher d-flex align-start justify-start">
     <input type="radio" id="en" value="en" v-model="locale" class="toggle toggle-left">
     <label for="en" class="btn">🇺🇸</label>

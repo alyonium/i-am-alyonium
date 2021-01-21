@@ -1,7 +1,7 @@
 <template>
   <v-container
       class="d-flex align-center">
-    <bracket-wrapper title=".Skills" color="purple" shadow="shadow-pink" size="big">
+    <bracket-wrapper title=".Skills" size="big">
       <skills-content></skills-content>
     </bracket-wrapper>
   </v-container>
@@ -9,7 +9,7 @@
 
 <script>
 import BracketWrapper from '@/components/BracketWrapper';
-import SkillsContent from '@/components/SkillsContent';
+import SkillsContent from '@/views/AlyoniumPage/Skills/SkillsContent';
 
 export default {
   name: 'Skills',
@@ -17,14 +17,5 @@ export default {
     SkillsContent,
     BracketWrapper,
   },
-  props: {
-  },
-  data() {
-    return {
-    };
-  },
 };
 </script>
-
-<style lang="scss">
-</style>

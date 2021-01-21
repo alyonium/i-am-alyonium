@@ -19,7 +19,7 @@
       offset-md="1"
       offset="0"
     >
-      <bracket-wrapper title="#front + #back" color="purple" shadow="shadow-pink" size="small">
+      <bracket-wrapper title="#front + #back" size="small">
         <p>HTML5, {{ $t('bem') }}<br>
           CSS3, SCSS<br>
           JavaScript (ES6)<br>
@@ -48,7 +48,7 @@
       offset-md="0"
       offset="0"
     >
-      <bracket-wrapper title="&.also" color="purple" shadow="shadow-pink" size="small">
+      <bracket-wrapper title="&.also" size="small">
         <p>Figma, Photoshop<br>
           Git, Subversion<br>
           English B1<br>
@@ -70,12 +70,13 @@ export default {
   components: {
     BracketWrapper,
   },
-  props: {},
 };
 </script>
 <style lang="scss" scoped>
+@import '~vuetify/src/styles/styles.sass';
+
 * {
-  color: #b388ff;
+  color: map-get($deep-purple, accent-1);
 }
 
 .emoji {
@@ -92,7 +93,7 @@ p {
   margin-bottom: 0 !important;
   padding-left: 40px;
   font-size: 1.8rem;
-  text-shadow: -1px 1px 1px #c2185b;
+  text-shadow: -1px 1px 1px map-get($pink, darken-3);
 }
 
 .col-content > div > div {
@@ -106,12 +107,6 @@ p {
   .emoji:hover {
     transform: unset;
   }
-}
-
-@media (max-width: 959px) {
-}
-
-@media (max-width: 599px) {
 }
 
 @media (max-width: 399px) {

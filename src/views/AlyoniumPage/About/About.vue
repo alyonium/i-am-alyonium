@@ -1,21 +1,21 @@
 <template>
   <v-container
       class="d-flex align-center">
-    <bracket-wrapper title=".Contacts" color="light-pink" shadow="shadow-blue" size="big">
-      <contacts-content></contacts-content>
+    <bracket-wrapper title=".About" size="big">
+      <about-content></about-content>
     </bracket-wrapper>
   </v-container>
 </template>
 
 <script>
 import BracketWrapper from '@/components/BracketWrapper';
-import ContactsContent from '@/components/ContactsContent';
+import AboutContent from '@/views/AlyoniumPage/About/AboutContent';
 
 export default {
-  name: 'Contacts',
+  name: 'About',
   components: {
-    ContactsContent,
     BracketWrapper,
+    AboutContent,
   },
   props: {
   },
