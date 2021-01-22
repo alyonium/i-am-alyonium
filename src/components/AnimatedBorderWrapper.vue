@@ -37,10 +37,12 @@ export default {
 
 .animated-border {
   position: relative;
-  border: 5px solid transparent;
+  border: 5px solid;
+  border-image-slice: 1;
   &_pink-purple {
-    border-image: linear-gradient(to left top, map-get($pink, darken-3) 10%,
-      transparent 30%, transparent 70%, map-get($deep-purple, darken-3) 90%) 1;
+    border-image-source: linear-gradient(to left top, map-get($deep-purple, lighten-2),
+      map-get($pink, darken-3), transparent 50%,
+      map-get($pink, darken-3), map-get($deep-purple, lighten-2));
   }
 }
 

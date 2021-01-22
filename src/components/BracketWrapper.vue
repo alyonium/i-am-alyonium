@@ -64,7 +64,7 @@ export default {
       font-size: 2.3rem;
     }
     &_shadow-pink.small {
-      text-shadow: -1px 1px 1px #a00037;
+      text-shadow: -1px 1px 1px map-get($pink, darken-3);
       font-size: 1.6rem;
     }
   }

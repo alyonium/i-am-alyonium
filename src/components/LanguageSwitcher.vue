@@ -33,6 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~vuetify/src/styles/styles.sass';
 
 .switcher {
   position: absolute;
@@ -50,14 +51,14 @@ input[type="radio"].toggle {
     border: 1px solid #000;
     &:hover {
       transition: 0.3s;
-      border: 1px solid #4d82cb;
+      border: 1px solid map-get($blue, darken-1);
     }
   }
   &:checked + label {
     cursor: default;
     transition: background 0.3s;
-    background: #4d82cb;
-    border: 1px solid #4d82cb;
+    background: map-get($blue, darken-1);
+    border: 1px solid map-get($blue, darken-1);
   }
 }
 </style>
