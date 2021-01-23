@@ -40,6 +40,7 @@ export default {
   font-size: 25px;
   top: 90vh;
   right: 0;
+  z-index: 200;
 }
 
 input[type="radio"].toggle {

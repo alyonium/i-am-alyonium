@@ -5389,6 +5389,11 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.npm.taobao.org/kind-of/download/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha1-B8BQNKbDSfoG4k+jWqdttFgM5N0=
 
+konva@^7.2.2:
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-7.2.2.tgz#e46598850d864b0dca68c82013f1e436b1eef55d"
+  integrity sha512-3vtCLFV8S9ooMEC/ELMoHJLWK3YtVUIx44FZFdM1FUBZi88qF4ctdzeII5hfT9Lx6ulVlhC0a6cRdP0uRWjMmw==
+
 launch-editor-middleware@^2.2.1:
   version "2.2.1"
   resolved "https://registry.npm.taobao.org/launch-editor-middleware/download/launch-editor-middleware-2.2.1.tgz#e14b07e6c7154b0a4b86a0fd345784e45804c157"
@@ -8875,6 +8880,11 @@ vue-i18n@^9.0.0-alpha.11:
   version "9.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-9.0.0-beta.4.tgz#a6550f6be56fd617a8ab96e26aa305329f06da02"
   integrity sha512-Ko1pNflNRwmwjVn2S4Oo9BGHzBRVBvBGdBzAKle713DmmFRnB+NnsJisSmwTqB6BtACCvvJdY+xRTjZaobHtew==
+
+vue-konva@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/vue-konva/-/vue-konva-2.1.6.tgz#f0d8dd9d5a2a55a8a89526d7fe0e55f3d60fa7bc"
+  integrity sha512-N0zuxDKDd3N9Y+7eGHkp9yB0Y68pjHc6tDZycozuohuOkDDsQ0GGqb7DloEp5tVKww9tWi+6wsigumG4jIXiGQ==
 
 "vue-loader-v16@npm:vue-loader@^16.0.0-beta.7":
   version "16.0.0-beta.8"

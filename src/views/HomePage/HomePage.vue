@@ -1,5 +1,6 @@
 <template>
   <fragment>
+    <background :tags="emojiList" :sizes="sizes"/>
     <main-content name="ALYONIUM"/>
     <about/>
     <portfolio/>
@@ -15,6 +16,7 @@ import Skills from '@/views/HomePage/Skills/Skills';
 import MainContent from '@/components/MainContent';
 import Contacts from '@/views/HomePage/Contacts/Contacts';
 import About from '@/views/HomePage/About/About';
+import Background from '@/components/Background';
 
 export default {
   name: 'HomePage',
@@ -24,7 +26,35 @@ export default {
     About,
     Portfolio,
     Skills,
+    Background,
     Fragment,
+  },
+  data() {
+    return {
+      emojiList: [
+        '🍑',
+        '🍓',
+        '🍒',
+        '✨',
+        '🔥',
+        '💕',
+        '☀️',
+        '🎀',
+        '🌸',
+        '🌙',
+        '🐰',
+        '🐵',
+      ],
+      sizes: [
+        12,
+        16,
+      ],
+    };
   },
 };
 </script>
+<style>
+* {
+  z-index: 100;
+}
+</style>

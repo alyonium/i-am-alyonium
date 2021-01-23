@@ -1,9 +1,11 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
+import VueKonva from 'vue-konva';
 import App from './App';
 import router from './router';
 import vuetify from './plugins/vuetify';
 
+Vue.use(VueKonva);
 Vue.use(VueI18n);
 Vue.config.productionTip = false;
 

@@ -23,6 +23,7 @@ export default {
 @import '~vuetify/src/styles/styles.sass';
 
 h1 {
+  cursor: default;
   font-size: 10rem;
   color: map-get($pink, lighten-2); //pink
   letter-spacing: 5px;
@@ -31,9 +32,6 @@ h1 {
   -7px 11px 0 map-get($blue, darken-1), //soft-blue
   -12px 17px 0 map-get($light-blue, darken-1), //blue
   -17px 23px 0 map-get($cyan, lighten-1); //light-blue
-}
-
-@media (max-width: 1264px) {
 }
 
 @media (max-width: 959px) {
