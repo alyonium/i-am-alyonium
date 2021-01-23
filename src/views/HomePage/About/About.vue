@@ -17,14 +17,5 @@ export default {
     BracketWrapper,
     AboutContent,
   },
-  props: {
-  },
-  data() {
-    return {
-    };
-  },
 };
 </script>
-
-<style lang="scss">
-</style>

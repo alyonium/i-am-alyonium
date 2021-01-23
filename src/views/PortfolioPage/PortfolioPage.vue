@@ -2,6 +2,7 @@
   <fragment>
     <background :tags="wordsList" :sizes="sizes"/>
     <main-content name="PORTFOLIO"/>
+    <portfolio-works-list/>
   </fragment>
 </template>
 
@@ -9,12 +10,14 @@
 import { Fragment } from 'vue-fragment';
 import MainContent from '@/components/MainContent';
 import Background from '@/components/Background';
+import PortfolioWorksList from '@/views/PortfolioPage/PortfolioWorksList';
 
 export default {
   name: 'PortfolioPage',
   components: {
     MainContent,
     Background,
+    PortfolioWorksList,
     Fragment,
   },
   data() {

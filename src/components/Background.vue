@@ -17,7 +17,6 @@
             opacity: 0.4,
             fontFamily:  'Hack',
             fontSize: item.size,
-            zIndex: 1,
           }"
         ></v-text>
       </v-layer>
@@ -46,6 +45,7 @@ export default {
       configKonva: {
         width: windowWidth,
         height: windowHeight,
+        zIndex: 1,
       },
     };
   },
@@ -86,9 +86,11 @@ export default {
 }
 
 div {
+  z-index: 1;
   position: fixed;
   * {
     font-family: 'Hack', sans-serif;
+    z-index: 1;
   }
 }
 </style>

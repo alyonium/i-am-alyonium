@@ -8,6 +8,7 @@ import vuetify from './plugins/vuetify';
 Vue.use(VueKonva);
 Vue.use(VueI18n);
 Vue.config.productionTip = false;
+Vue.prototype.$httpRequest = 'http://localhost:3000';
 
 const i18n = new VueI18n({
   locale: 'ru', // установка локализации по умолчанию

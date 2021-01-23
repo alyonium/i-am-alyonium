@@ -21,7 +21,7 @@
         offset="0">
 
       <animated-border-wrapper>
-        <a href="https://alyonium.github.io/space/" class="picture-link d-flex"><img src="../../../assets/img/temp1.png" alt="screenshot" class="portfolio-photo"></a>
+        <a href="https://alyonium.github.io/turkish-language/" class="picture-link d-flex"><img src="../../../assets/img/temp1.png" alt="screenshot" class="portfolio-photo"></a>
       </animated-border-wrapper>
 
     </v-col>
@@ -62,7 +62,7 @@
       class="d-flex justify-center align-center">
       <p class="portfolio-link">{{ $t('portfolio') }} <nobr>
         <router-link to="/portfolio">
-          <a href="#">{{ $t('portfolio-link') }}</a>
+          <a>{{ $t('portfolio-link') }}</a>
         </router-link>
         🍓</nobr> </p>
     </v-col>
