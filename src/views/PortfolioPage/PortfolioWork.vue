@@ -43,8 +43,8 @@
           {{ technology }},
         </p>
       </bracket-wrapper>
-        <a :href="work.source">source code</a>
-        <a :href="work.online">see project</a>
+        <a :href="work.source" target="_blank">source code</a>
+        <a :href="work.online" target="_blank">see project</a>
         <p>{{ work.year }}</p>
     </v-col>
   </v-row>
@@ -72,7 +72,6 @@ export default {
 @import '~vuetify/src/styles/styles.sass';
 img {
   object-fit: contain;
-  z-index: 100;
 }
 
 .images-container {
@@ -110,8 +109,9 @@ img {
   height: 180px;
   position: absolute;
   bottom: -110px;
-  right: -265px;
+  right: -264px;
   z-index: 1;
+  transform: rotate(-1deg);
 }
 
 a {
@@ -135,5 +135,43 @@ p {
   padding-left: 40px;
   font-size: 1.8rem;
   text-shadow: -1px 1px 1px map-get($pink, darken-3);
+}
+
+@media (max-width: 1264px) {
+  .laptopEmpty {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: -180px;
+    left: -250px;
+  }
+
+  .laptop {
+    width: 225px;
+    height: 225px;
+    position: absolute;
+    top: -200px;
+    left: -215px;
+    z-index: 1;
+  }
+
+  .phoneEmpty {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    bottom: -140px;
+    right: -300px;
+    transform: rotate(15deg);
+  }
+
+  .phone {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    bottom: -110px;
+    right: -264px;
+    z-index: 1;
+    transform: rotate(-1deg);
+  }
 }
 </style>

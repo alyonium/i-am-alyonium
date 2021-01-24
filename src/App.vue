@@ -31,6 +31,11 @@ export default {
   font-weight: 400;
 }
 
+.row,
+.col {
+  z-index: 100;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;

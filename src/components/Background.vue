@@ -53,8 +53,6 @@ export default {
     window.setInterval(() => {
       this.updateList();
     }, 50);
-  },
-  mounted() {
     for (let n = 0; n < (windowWidth / 50); n += 1) {
       this.list.push({
         id: n.toString(),
@@ -86,11 +84,9 @@ export default {
 }
 
 div {
-  z-index: 1;
   position: fixed;
   * {
     font-family: 'Hack', sans-serif;
-    z-index: 1;
   }
 }
 </style>
