@@ -1,24 +1,16 @@
 <template>
   <v-row
-    class="no-gutters pt-8 pb-5 pa-0">
+    class="no-gutters pt-8 pb-5 pa-0 justify-center">
     <v-col
       cols="12"
+      offset="0"
       md="5"
       offset-md="1"
-      offset="0"
+      sm="12"
+      offset-sm="0"
       class="d-flex justify-center align-center"
     >
       <div class="images-container">
-        <img
-          src="../../assets/img/laptopEmpty.png"
-          alt="laptop"
-          class="laptopEmpty"
-        >
-        <img
-          src="../../assets/img/phoneEmpty.png"
-          alt="phone"
-          class="phoneEmpty"
-        >
         <img
           :src="work.images.laptop"
           alt="laptop"
@@ -34,18 +26,23 @@
 
     <v-col
       cols="12"
+      offset="0"
       md="6"
-      class="d-flex flex-column justify-center">
-      <bracket-wrapper title=".technical-sheet" size="small">
+      offset-md="0"
+      sm="9"
+      class="d-flex flex-column justify-center align-md-start align-center">
+      <bracket-wrapper title=".technical-sheet" class="d-flex justify-center technology-block" size="small" portfolio="portfolio">
         <p
           v-for="technology in technologies"
         >
           {{ technology }},
         </p>
       </bracket-wrapper>
+      <div class="d-flex flex-column source-block">
         <a :href="work.source" target="_blank">source code</a>
         <a :href="work.online" target="_blank">see project</a>
         <p>{{ work.year }}</p>
+      </div>
     </v-col>
   </v-row>
 </template>
@@ -78,40 +75,23 @@ img {
   position: relative;
 }
 
-.laptopEmpty {
+.laptop {
   width: 400px;
   height: 400px;
-  position: absolute;
-  top: -180px;
-  left: -300px;
-}
-
-.laptop {
-  width: 300px;
-  height: 300px;
   position: absolute;
   top: -210px;
   left: -253px;
   z-index: 1;
 }
 
-.phoneEmpty {
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  bottom: -140px;
-  right: -300px;
-  transform: rotate(15deg);
-}
-
 .phone {
   width: 180px;
   height: 180px;
   position: absolute;
-  bottom: -110px;
+  bottom: -80px;
   right: -264px;
   z-index: 1;
-  transform: rotate(-1deg);
+  transform: rotate(15deg);
 }
 
 a {
@@ -138,40 +118,92 @@ p {
 }
 
 @media (max-width: 1264px) {
-  .laptopEmpty {
+  .laptop {
     width: 300px;
     height: 300px;
-    position: absolute;
-    top: -180px;
-    left: -250px;
-  }
-
-  .laptop {
-    width: 225px;
-    height: 225px;
-    position: absolute;
-    top: -200px;
+    top: -150px;
     left: -215px;
-    z-index: 1;
-  }
-
-  .phoneEmpty {
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    bottom: -140px;
-    right: -300px;
-    transform: rotate(15deg);
   }
 
   .phone {
     width: 180px;
     height: 180px;
+    bottom: -90px;
+    right: -220px;
+  }
+}
+
+@media (max-width: 959px) {
+  .laptop {
+    width: 300px;
+    height: 300px;
+    position: static;
+  }
+
+  .phone {
+    width: 180px;
+    height: 180px;
+    top: -60px;
+    position: relative;
+    right: -25px;
+  }
+
+  .source-block {
+    width: 360px;
+  }
+}
+
+@media (max-width: 601px) {
+  .phone {
+    width: 180px;
+    height: 180px;
+    top: 150px;
     position: absolute;
-    bottom: -110px;
-    right: -264px;
-    z-index: 1;
-    transform: rotate(-1deg);
+    right: 50px;
+    transform: rotate(30deg);
+  }
+
+  .source-block {
+    width: 320px;
+  }
+
+  .phone {
+    width: 150px;
+    height: 150px;
+    top: 55px;
+    position: absolute;
+    right: -45px;
+    transform: rotate(15deg);
+  }
+
+  .laptop {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    top: 0;
+    left: -10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .technology-block {
+    padding-top: 25px;
+  }
+
+  .source-block {
+    width: 300px;
+  }
+
+  .images-container {
+    overflow: hidden;
+  }
+
+  .laptop {
+    left: 0;
+  }
+
+  .phone {
+    right: -40px;
   }
 }
 </style>

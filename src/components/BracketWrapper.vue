@@ -4,10 +4,10 @@
   >
     <div>
       <h2 class="bracket bracket_pink bracket_shadow-purple"
-          :class="{[`${size}`]: true}">{{ title }} {</h2>
+          :class="{[`${size}`]: true, [`${portfolio}`]: isPortfolio}">{{ title }} {</h2>
       <slot></slot>
       <p class="bracket bracket_pink bracket_shadow-purple"
-         :class="{[`${size}`]: true}">}</p>
+         :class="{[`${size}`]: true, [`${portfolio}`]: isPortfolio}">}</p>
     </div>
   </v-col>
 </template>
@@ -18,6 +18,15 @@ export default {
   props: {
     title: String,
     size: String,
+    portfolio: String,
+  },
+  mounted() {
+    console.log(this.isPortfolio);
+  },
+  data() {
+    return {
+      isPortfolio: !!this.portfolio,
+    };
   },
 };
 </script>
@@ -56,6 +65,15 @@ export default {
       font-size: 3rem;
     }
   }
+
+  .portfolio {
+    &.big {
+      font-size: 2.44rem;
+    }
+    &.small {
+      font-size: 1.8rem;
+    }
+  }
 }
 
 @media (max-width: 400px) {
@@ -63,9 +81,17 @@ export default {
     &.big {
       font-size: 2.3rem;
     }
-    &_shadow-pink.small {
+    .small {
       text-shadow: -1px 1px 1px map-get($pink, darken-3);
       font-size: 1.6rem;
+    }
+  }
+  .portfolio {
+    &.big {
+      font-size: 1.88rem;
+    }
+    &.small {
+      font-size: 1.43rem;
     }
   }
 }

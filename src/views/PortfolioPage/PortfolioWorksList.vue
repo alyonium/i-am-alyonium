@@ -4,7 +4,7 @@
       class="d-flex align-center"
       v-for="work in works"
       :key="work.id">
-      <bracket-wrapper :title="work.title" size="big">
+      <bracket-wrapper :title="work.title" size="big" portfolio="portfolio">
         <portfolio-work :work="work"/>
       </bracket-wrapper>
     </v-container>
