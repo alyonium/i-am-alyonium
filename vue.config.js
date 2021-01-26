@@ -3,6 +3,7 @@ module.exports = {
   transpileDependencies: [
     'vuetify',
   ],
+  publicPath: '/',
   chainWebpack: (config) => {
     config.module
       .rule('i18n')

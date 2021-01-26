@@ -8,7 +8,7 @@ import vuetify from './plugins/vuetify';
 Vue.use(VueKonva);
 Vue.use(VueI18n);
 Vue.config.productionTip = false;
-Vue.prototype.$httpRequest = 'http://localhost:3000';
+Vue.prototype.$httpRequest = 'https://alyonium.herokuapp.com';
 
 let userLang = window.navigator.language || window.navigator.userLanguage;
 

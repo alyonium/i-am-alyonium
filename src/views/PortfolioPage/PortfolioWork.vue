@@ -24,12 +24,12 @@
     >
       <div class="images-container">
         <img
-          :src="work.images.laptop"
+          :src="`${$httpRequest}${work.images.laptop}`"
           alt="laptop"
           class="laptop"
         >
         <img
-          :src="work.images.phone"
+          :src="`${$httpRequest}${work.images.phone}`"
           alt="laptop"
           class="phone"
         >
@@ -43,7 +43,12 @@
       offset-md="0"
       sm="9"
       class="d-flex flex-column justify-center align-md-start align-center">
-      <bracket-wrapper title=".technical-sheet" class="d-flex justify-center technology-block" size="small" portfolio="portfolio">
+      <bracket-wrapper
+        title=".technical-sheet"
+        class="d-flex justify-center technology-block"
+        size="small"
+        portfolio="portfolio"
+      >
         <p
           v-for="technology in technologies"
         >

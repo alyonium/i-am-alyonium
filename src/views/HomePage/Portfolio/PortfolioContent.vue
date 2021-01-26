@@ -24,8 +24,10 @@
     >
 
       <animated-border-wrapper>
-        <a :href="work.online" class="picture-link d-flex">
-          <img :src="work.preview" alt="screenshot" class="portfolio-photo">
+        <a :href="work.online"
+           target="_blank"
+           class="picture-link d-flex">
+          <img :src="`${$httpRequest}${work.preview}`" alt="screenshot" class="portfolio-photo">
         </a>
       </animated-border-wrapper>
 
