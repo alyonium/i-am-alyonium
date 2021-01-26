@@ -16,17 +16,15 @@ export default {
   components: {
     AnimatedBorderWrapper,
   },
-  props: {
-  },
   data() {
-    this.$i18n.locale = 'ru';
     return {
-      locale: 'ru',
+      locale: this.$i18n.locale,
     };
   },
   watch: {
     locale(val) {
       this.$i18n.locale = val;
+      localStorage.setItem('locale', val);
     },
   },
 };

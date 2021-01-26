@@ -18,36 +18,15 @@
         md="3"
         class="d-flex justify-center align-center"
         offset-md="1"
-        offset="0">
+        offset="0"
+        v-for="work in works"
+        :key="work.id"
+    >
 
       <animated-border-wrapper>
-        <a href="https://alyonium.github.io/turkish-language/" class="picture-link d-flex"><img src="../../../assets/img/temp1.png" alt="screenshot" class="portfolio-photo"></a>
-      </animated-border-wrapper>
-
-    </v-col>
-
-    <v-col
-      cols="12"
-      md="3"
-      class="d-flex justify-center align-center"
-      offset-md="1"
-      offset="0">
-
-      <animated-border-wrapper>
-        <a href="https://alyonium.github.io/travel/" class="picture-link d-flex"><img src="../../../assets/img/temp2.png" alt="screenshot" class="portfolio-photo"></a>
-      </animated-border-wrapper>
-
-    </v-col>
-
-    <v-col
-      cols="12"
-      md="3"
-      class="d-flex justify-center align-center"
-      offset-md="1"
-      offset="0">
-
-      <animated-border-wrapper>
-        <a href="https://alyonium.github.io/kindergarden/" class="picture-link d-flex"><img src="../../../assets/img/temp3.png" alt="screenshot" class="portfolio-photo"></a>
+        <a :href="work.online" class="picture-link d-flex">
+          <img :src="work.preview" alt="screenshot" class="portfolio-photo">
+        </a>
       </animated-border-wrapper>
 
     </v-col>
@@ -71,11 +50,29 @@
 
 <script>
 import AnimatedBorderWrapper from '@/components/AnimatedBorderWrapper';
+import axios from 'axios';
 
 export default {
   name: 'PortfolioContent',
   components: {
     AnimatedBorderWrapper,
+  },
+  data() {
+    return {
+      works: [],
+    };
+  },
+  mounted() {
+    this.getWorkList();
+  },
+  methods: {
+    getWorkList() {
+      axios
+        .get(`${this.$httpRequest}/getPreviews`)
+        .then((response) => {
+          this.works = response.data;
+        });
+    },
   },
 };
 </script>

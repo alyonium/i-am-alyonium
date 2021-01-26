@@ -10,8 +10,18 @@ Vue.use(VueI18n);
 Vue.config.productionTip = false;
 Vue.prototype.$httpRequest = 'http://localhost:3000';
 
+let userLang = window.navigator.language || window.navigator.userLanguage;
+
+if (localStorage.getItem('locale')) {
+  userLang = localStorage.getItem('locale');
+} else if (userLang.includes('ru')) {
+  localStorage.setItem('locale', 'ru');
+} else {
+  localStorage.setItem('locale', 'en');
+}
+
 const i18n = new VueI18n({
-  locale: 'ru', // установка локализации по умолчанию
+  locale: localStorage.getItem('locale'), // установка локализации по умолчанию
 });
 
 new Vue({

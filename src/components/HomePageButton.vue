@@ -1,3 +1,13 @@
+<i18n>
+{
+  "ru": {
+    "button": "Главная"
+  },
+  "en": {
+    "button": "Home Page"
+  }
+}
+</i18n>
 <template>
   <router-link to="/" class="home-button">
     <v-btn
@@ -5,7 +15,7 @@
       elevation="2"
       small
     >
-      Home Page
+      {{ $t('button')}}
     </v-btn>
   </router-link>
 </template>

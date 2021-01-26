@@ -1,3 +1,15 @@
+<i18n>
+{
+  "ru": {
+    "source": "исходный код",
+    "online": "посмотреть проект"
+  },
+  "en": {
+    "source": "source code",
+    "online": "see project"
+  }
+}
+</i18n>
 <template>
   <v-row
     class="no-gutters pt-8 pb-5 pa-0 justify-center">
@@ -39,8 +51,8 @@
         </p>
       </bracket-wrapper>
       <div class="d-flex flex-column source-block">
-        <a :href="work.source" target="_blank">source code</a>
-        <a :href="work.online" target="_blank">see project</a>
+        <a :href="work.source" target="_blank">{{ $t('source') }}</a>
+        <a :href="work.online" target="_blank">{{ $t('online') }}</a>
         <p>{{ work.year }}</p>
       </div>
     </v-col>
