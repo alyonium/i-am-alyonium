@@ -20,9 +20,6 @@ export default {
     size: String,
     portfolio: String,
   },
-  mounted() {
-    console.log(this.isPortfolio);
-  },
   data() {
     return {
       isPortfolio: !!this.portfolio,

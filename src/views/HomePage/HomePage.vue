@@ -1,12 +1,14 @@
 <template>
-  <fragment>
-    <background :tags="emojiList" :sizes="sizes"/>
-    <main-content name="ALYONIUM"/>
-    <about/>
-    <portfolio/>
-    <skills/>
-    <contacts/>
-  </fragment>
+  <transition>
+    <fragment>
+      <background :tags="emojiList" :sizes="sizes"/>
+      <main-content name="ALYONIUM"/>
+      <about/>
+      <portfolio/>
+      <skills/>
+      <contacts/>
+    </fragment>
+  </transition>
 </template>
 
 <script>
@@ -43,13 +45,10 @@ export default {
         '🌙',
         '🐰',
         '🐵',
-        '👙',
         '💋',
-        '🖖',
         '👩‍💻',
         '💄',
         '💍',
-        '👠',
         '🦕',
         '⭐',
         '🌊',
@@ -57,6 +56,10 @@ export default {
         '🍌',
         '🍫',
         '🍭',
+        '🍉',
+        '🍕',
+        '💌',
+        '🔮',
       ],
       sizes: [
         12,

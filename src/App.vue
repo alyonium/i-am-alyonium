@@ -2,18 +2,26 @@
   <v-app>
     <v-main>
       <language-switcher/>
-      <router-view/>
+      <home-page-button v-if="isPortfolio"/>
+      <transition name="fade" mode="out-in">
+        <router-view/>
+      </transition>
     </v-main>
   </v-app>
 </template>
 
 <script>
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import HomePageButton from '@/components/HomePageButton';
 
 export default {
   name: 'App',
   components: {
     LanguageSwitcher,
+    HomePageButton,
+  },
+  computed: {
+    isPortfolio() { return this.$route.path === '/portfolio'; },
   },
 };
 </script>

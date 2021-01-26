@@ -73,6 +73,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 const emailRegExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 export default {
@@ -94,14 +96,16 @@ export default {
       defaultForm,
     };
   },
-
   methods: {
     submit() {
       this.snackbar = true;
     },
-
-    validate() {
-      return this.$refs.form.validate();
+    async validate() {
+      await axios
+        .post(`${this.$httpRequest}/sentMessage`, {
+          mail: this.form.email,
+          message: this.form.message,
+        });
     },
   },
 };

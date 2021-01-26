@@ -117,6 +117,15 @@ p {
   text-shadow: -1px 1px 1px map-get($pink, darken-3);
 }
 
+.source-block {
+  margin-left: 200px;
+}
+
+@media (max-width: 1903px) {
+  .source-block {
+    margin-left: 0;
+  }
+}
 @media (max-width: 1264px) {
   .laptop {
     width: 300px;
