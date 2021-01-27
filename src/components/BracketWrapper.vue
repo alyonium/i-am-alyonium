@@ -78,8 +78,7 @@ export default {
     &.big {
       font-size: 2.3rem;
     }
-    .small {
-      text-shadow: -1px 1px 1px map-get($pink, darken-3);
+    &.small {
       font-size: 1.6rem;
     }
   }

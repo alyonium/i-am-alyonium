@@ -67,7 +67,7 @@ h1 {
 @media (max-width: 400px) {
   h1 {
     padding-left: 5px;
-    font-size: 3.1rem;
+    font-size: 2.9rem;
     color: map-get($pink, lighten-2); //pink
     letter-spacing: 5px;
     text-shadow: 0 0 2px map-get($purple, lighten-2),

@@ -72,7 +72,7 @@ export default {
   min-width: unset !important;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 959px) {
   .container {
     height: auto;
   }
