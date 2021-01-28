@@ -21,7 +21,7 @@ if (localStorage.getItem('locale')) {
 }
 
 const i18n = new VueI18n({
-  locale: localStorage.getItem('locale'), // установка локализации по умолчанию
+  locale: localStorage.getItem('locale'),
 });
 
 new Vue({

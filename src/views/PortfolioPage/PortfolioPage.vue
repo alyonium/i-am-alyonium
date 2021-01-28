@@ -1,22 +1,22 @@
 <template>
   <fragment>
-    <background :tags="wordsList" :sizes="sizes"/>
-    <main-content name="PORTFOLIO"/>
+    <moving-background :tags="wordsList" :sizes="sizes"/>
+    <main-header name="PORTFOLIO"/>
     <portfolio-works-list/>
   </fragment>
 </template>
 
 <script>
 import { Fragment } from 'vue-fragment';
-import MainContent from '@/components/MainContent';
-import Background from '@/components/Background';
+import MainHeader from '@/components/MainHeader';
+import MovingBackground from '@/components/MovingBackground';
 import PortfolioWorksList from '@/views/PortfolioPage/PortfolioWorksList';
 
 export default {
   name: 'PortfolioPage',
   components: {
-    MainContent,
-    Background,
+    MainHeader,
+    MovingBackground,
     PortfolioWorksList,
     Fragment,
   },

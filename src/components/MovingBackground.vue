@@ -34,6 +34,8 @@ const colors = [
   '#1e88e5',
 ];
 
+// pink lighten-2, purple lighten-2, blue darken-1
+
 export default {
   props: {
     tags: Array,

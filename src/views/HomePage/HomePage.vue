@@ -1,8 +1,8 @@
 <template>
   <transition>
     <fragment>
-      <background :tags="emojiList" :sizes="sizes"/>
-      <main-content name="ALYONIUM"/>
+      <moving-background :tags="emojiList" :sizes="sizes"/>
+      <main-header name="ALYONIUM"/>
       <about/>
       <portfolio/>
       <skills/>
@@ -15,20 +15,20 @@
 import { Fragment } from 'vue-fragment';
 import Portfolio from '@/views/HomePage/Portfolio/Portfolio';
 import Skills from '@/views/HomePage/Skills/Skills';
-import MainContent from '@/components/MainContent';
+import MainHeader from '@/components/MainHeader';
 import Contacts from '@/views/HomePage/Contacts/Contacts';
 import About from '@/views/HomePage/About/About';
-import Background from '@/components/Background';
+import MovingBackground from '@/components/MovingBackground';
 
 export default {
   name: 'HomePage',
   components: {
     Contacts,
-    MainContent,
+    MainHeader,
     About,
     Portfolio,
     Skills,
-    Background,
+    MovingBackground,
     Fragment,
   },
   data() {

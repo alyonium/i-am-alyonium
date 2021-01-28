@@ -4,10 +4,10 @@
   >
     <div>
       <h2 class="bracket bracket_pink bracket_shadow-purple"
-          :class="{[`${size}`]: true, [`${portfolio}`]: isPortfolio}">{{ title }} {</h2>
+          :class="{[size]: true, 'portfolio': !!isPortfolio}">{{ title }} {</h2>
       <slot></slot>
       <p class="bracket bracket_pink bracket_shadow-purple"
-         :class="{[`${size}`]: true, [`${portfolio}`]: isPortfolio}">}</p>
+         :class="{[size]: true, 'portfolio': !!isPortfolio}">}</p>
     </div>
   </v-col>
 </template>
@@ -18,12 +18,7 @@ export default {
   props: {
     title: String,
     size: String,
-    portfolio: String,
-  },
-  data() {
-    return {
-      isPortfolio: !!this.portfolio,
-    };
+    isPortfolio: Boolean,
   },
 };
 </script>
@@ -44,7 +39,7 @@ export default {
   }
 
   &_shadow-purple {
-    text-shadow: -2px 2px 1px #651fff;
+    text-shadow: -2px 2px 1px map-get($deep-purple, accent-3);
   }
 }
 
@@ -89,6 +84,9 @@ export default {
     &.small {
       font-size: 1.43rem;
     }
+  }
+  .bracket_shadow-purple.small {
+    text-shadow: -1px 1px 1px map-get($deep-purple, accent-3);
   }
 }
 </style>

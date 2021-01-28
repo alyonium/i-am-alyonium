@@ -1,7 +1,6 @@
 <template>
   <div
-    class="d-flex align-center justify-center"
-    :class="{'animated-border': deviceScreenHeight(), [`animated-border_pink-purple`]: isAnimate}">
+    class="d-flex align-center justify-center animated-border">
     <slot></slot>
   </div>
 </template>
@@ -9,26 +8,6 @@
 <script>
 export default {
   name: 'AnimatedBorderWrapper',
-  props: {
-    frameColor: String,
-  },
-  data() {
-    return {
-      isAnimate: !(window.innerWidth <= 1264),
-    };
-  },
-  methods: {
-    deviceScreenHeight() {
-      this.isAnimate = !(window.innerWidth <= 1264);
-      return !(window.innerWidth <= 1264);
-    },
-  },
-  created() {
-    window.addEventListener('resize', this.deviceScreenHeight);
-  },
-  destroyed() {
-    window.removeEventListener('resize', this.deviceScreenHeight);
-  },
 };
 
 </script>
@@ -39,11 +18,16 @@ export default {
   position: relative;
   border: 5px solid;
   border-image-slice: 1;
-  &_pink-purple {
-    border-image-source: linear-gradient(to left top, map-get($deep-purple, lighten-2),
+  border-image-source: linear-gradient(to left top, map-get($deep-purple, lighten-2),
       map-get($pink, darken-3), transparent 50%,
       map-get($pink, darken-3), map-get($deep-purple, lighten-2));
-  }
 }
 
+@media (max-width: 1264px) {
+  .animated-border {
+    border: unset;
+    position: static;
+    display: none;
+  }
+}
 </style>
