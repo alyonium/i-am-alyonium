@@ -3,32 +3,42 @@
     <fragment>
       <moving-background :tags="emojiList" :sizes="sizes"/>
       <main-header name="ALYONIUM"/>
-      <about/>
-      <portfolio/>
-      <skills/>
-      <contacts/>
+      <content-wrapper title=".About" size="big">
+        <about-content/>
+      </content-wrapper>
+      <content-wrapper title=".Portfolio" size="big">
+        <portfolio-content/>
+      </content-wrapper>
+      <content-wrapper title=".Skills" size="big">
+        <skills-content/>
+      </content-wrapper>
+      <content-wrapper title=".Contacts" size="big">
+        <contacts-content/>
+      </content-wrapper>
     </fragment>
   </transition>
 </template>
 
 <script>
 import { Fragment } from 'vue-fragment';
-import Portfolio from '@/views/HomePage/Portfolio/Portfolio';
-import Skills from '@/views/HomePage/Skills/Skills';
 import MainHeader from '@/components/MainHeader';
-import Contacts from '@/views/HomePage/Contacts/Contacts';
-import About from '@/views/HomePage/About/About';
 import MovingBackground from '@/components/MovingBackground';
+import ContentWrapper from '@/components/ContentWrapper';
+import AboutContent from '@/views/HomePage/AboutContent';
+import PortfolioContent from '@/views/HomePage/PortfolioContent';
+import SkillsContent from '@/views/HomePage/SkillsContent';
+import ContactsContent from '@/views/HomePage/ContactsContent';
 
 export default {
   name: 'HomePage',
   components: {
-    Contacts,
     MainHeader,
-    About,
-    Portfolio,
-    Skills,
     MovingBackground,
+    ContentWrapper,
+    AboutContent,
+    PortfolioContent,
+    SkillsContent,
+    ContactsContent,
     Fragment,
   },
   data() {
