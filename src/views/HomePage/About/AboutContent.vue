@@ -94,11 +94,11 @@ export default {
       width: 300px;
       height: 300px;
       margin-top: 20px;
-      border: 2px solid #651fff;
-      box-shadow: 0 0 10px 2px #651fff;
+      border: 2px solid map-get($deep-purple, accent-2);
+      box-shadow: 0 0 10px 2px map-get($deep-purple, accent-1);
       &:hover {
         transform: none;
-        border:  2px solid #651fff;
+        border: 2px solid map-get($deep-purple, accent-2);
         transition: none;
       }
     }

@@ -70,11 +70,11 @@ h1 {
     font-size: 2.9rem;
     color: map-get($pink, lighten-2); //pink
     letter-spacing: 5px;
-    text-shadow: 0 0 2px map-get($purple, lighten-2),
-    -2px 4px 0 map-get($deep-purple, lighten-2),
-    -3px 8px 0 map-get($blue, darken-1),
-    -5px 12px 0 map-get($light-blue, darken-1),
-    -6px 16px 0 map-get($cyan, lighten-2);
+    text-shadow: 0 0 1px map-get($purple, lighten-2),
+    -1px 2px 0 map-get($deep-purple, lighten-2),
+    -2px 4px 0 map-get($blue, darken-1),
+    -3px 6px 0 map-get($light-blue, darken-1),
+    -4px 8px 0 map-get($cyan, lighten-2);
   }
 }
 

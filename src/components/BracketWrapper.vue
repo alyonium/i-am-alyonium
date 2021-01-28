@@ -4,10 +4,10 @@
   >
     <div>
       <h2 class="bracket bracket_pink bracket_shadow-purple"
-          :class="{[size]: true, 'portfolio': !!isPortfolio}">{{ title }} {</h2>
+          :class="{[size]: true, portfolio: !!isPortfolio}">{{ title }} {</h2>
       <slot></slot>
       <p class="bracket bracket_pink bracket_shadow-purple"
-         :class="{[size]: true, 'portfolio': !!isPortfolio}">}</p>
+         :class="{[size]: true, portfolio: !!isPortfolio}">}</p>
     </div>
   </v-col>
 </template>

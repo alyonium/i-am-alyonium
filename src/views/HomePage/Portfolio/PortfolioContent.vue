@@ -120,12 +120,13 @@ export default {
     .portfolio-photo {
       width: 250px;
       height: 250px;
-      border: 2px solid map-get($deep-purple, accent-1);
+      border: 2px solid map-get($deep-purple, accent-2);
       box-shadow: 0 0 10px 2px map-get($deep-purple, accent-1);
       margin-top: 20px;
       &:hover {
         transform: none;
         border: 2px solid map-get($deep-purple, accent-1);
+        transition: none;
       }
     }
 

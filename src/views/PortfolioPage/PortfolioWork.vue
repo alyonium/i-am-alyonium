@@ -47,10 +47,10 @@
         title=".technical-sheet"
         class="d-flex justify-center technology-block"
         size="small"
-        portfolio="portfolio"
+        :isPortfolio="true"
       >
         <p
-          v-for="technology in technologies"
+          v-for="technology in work.description"
         >
           {{ technology }},
         </p>
@@ -74,11 +74,6 @@ export default {
   },
   props: {
     work: Object,
-  },
-  data() {
-    return {
-      technologies: this.work.description,
-    };
   },
 };
 </script>
@@ -209,15 +204,27 @@ p {
     top: 0;
     left: -10px;
   }
+
+  a,
+  .source-block p {
+    font-size: 1.7rem;
+  }
 }
 
 @media (max-width: 400px) {
   .technology-block {
     padding-top: 25px;
+
+    p {
+      padding-left: 30px;
+    }
   }
 
   .source-block {
     width: 300px;
+    * {
+      padding-left: 30px;
+    }
   }
 
   .images-container {
@@ -230,6 +237,10 @@ p {
 
   .phone {
     right: -40px;
+  }
+  a,
+  .source-block p {
+    font-size: 1.5rem;
   }
 }
 </style>
