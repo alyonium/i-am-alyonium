@@ -55,13 +55,11 @@
           {{ technology }},
         </p>
       </bracket-wrapper>
-      <v-col
-        cols="12"
-        class="d-flex flex-column source-block">
+      <div class="d-flex flex-column source-block">
         <a :href="work.source" target="_blank">{{ $t('source') }}</a>
         <a :href="work.online" target="_blank">{{ $t('online') }}</a>
         <p>{{ work.year }}</p>
-      </v-col>
+      </div>
     </v-col>
   </v-row>
 </template>
@@ -129,6 +127,10 @@ p {
   padding-left: 40px;
   font-size: 1.8rem;
   text-shadow: -1px 1px 1px map-get($pink, darken-3);
+}
+
+.technology-block {
+  max-height: 420px;
 }
 
 .source-block {
@@ -210,7 +212,6 @@ p {
   a,
   .source-block p {
     font-size: 1.7rem;
-    padding: 0;
   }
 }
 
