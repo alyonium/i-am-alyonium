@@ -55,11 +55,13 @@
           {{ technology }},
         </p>
       </bracket-wrapper>
-      <div class="d-flex flex-column source-block">
+      <v-col
+        cols="12"
+        class="d-flex flex-column source-block">
         <a :href="work.source" target="_blank">{{ $t('source') }}</a>
         <a :href="work.online" target="_blank">{{ $t('online') }}</a>
         <p>{{ work.year }}</p>
-      </div>
+      </v-col>
     </v-col>
   </v-row>
 </template>
@@ -208,23 +210,17 @@ p {
   a,
   .source-block p {
     font-size: 1.7rem;
+    padding: 0;
   }
 }
 
 @media (max-width: 400px) {
   .technology-block {
     padding-top: 25px;
-
-    p {
-      padding-left: 30px;
-    }
   }
 
   .source-block {
     width: 300px;
-    * {
-      padding-left: 30px;
-    }
   }
 
   .images-container {
@@ -238,6 +234,7 @@ p {
   .phone {
     right: -40px;
   }
+
   a,
   .source-block p {
     font-size: 1.5rem;

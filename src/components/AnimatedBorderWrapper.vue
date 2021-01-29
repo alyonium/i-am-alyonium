@@ -1,7 +1,7 @@
 <template>
   <div
     class="d-flex align-center justify-center animated-border">
-    <slot></slot>
+    <slot/>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
     border: unset;
     position: static;
     display: none;
+    border-image: none;
   }
 }
 </style>
