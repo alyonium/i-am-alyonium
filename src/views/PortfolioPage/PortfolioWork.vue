@@ -11,66 +11,79 @@
 }
 </i18n>
 <template>
-  <v-row
-    class="no-gutters pt-8 pb-5 pa-0 justify-center">
-    <v-col
-      cols="12"
-      offset="0"
-      md="5"
-      offset-md="1"
-      sm="12"
-      offset-sm="0"
-      class="d-flex justify-center align-center"
-    >
-      <div class="images-container">
-        <img
-          :src="`${$httpRequest}${work.images.laptop}`"
-          alt="laptop"
-          class="laptop"
-        >
-        <img
-          :src="`${$httpRequest}${work.images.phone}`"
-          alt="laptop"
-          class="phone"
-        >
-      </div>
-    </v-col>
-
-    <v-col
-      cols="12"
-      offset="0"
-      md="6"
-      offset-md="0"
-      sm="9"
-      class="d-flex flex-column justify-center align-md-start align-center">
-      <bracket-wrapper
-        title=".technical-sheet"
-        class="d-flex justify-center technology-block"
-        size="small"
-        :isPortfolio="true"
+  <fragment>
+    <v-row
+      class="no-gutters pt-8 pb-5 pa-0 justify-center">
+      <v-col
+        cols="12"
+        offset="0"
+        md="5"
+        offset-md="1"
+        sm="12"
+        offset-sm="0"
+        class="d-flex justify-center align-center"
       >
-        <p
-          v-for="technology in work.description"
+        <div class="images-container">
+          <img
+            :src="`${$httpRequest}${work.images.laptop}`"
+            alt="laptop"
+            class="laptop"
+          >
+          <img
+            :src="`${$httpRequest}${work.images.phone}`"
+            alt="laptop"
+            class="phone"
+          >
+        </div>
+      </v-col>
+
+      <v-col
+        cols="12"
+        offset="0"
+        md="6"
+        offset-md="0"
+        sm="9"
+        class="d-flex flex-column justify-center align-md-start align-center">
+        <bracket-wrapper
+          title=".technical-sheet"
+          class="d-flex justify-center align-center technology-block pb-0"
+          size="small"
+          :isPortfolio="true"
         >
-          {{ technology }},
-        </p>
-      </bracket-wrapper>
-      <div class="d-flex flex-column source-block">
-        <a :href="work.source" target="_blank">{{ $t('source') }}</a>
-        <a :href="work.online" target="_blank">{{ $t('online') }}</a>
-        <p>{{ work.year }}</p>
-      </div>
-    </v-col>
-  </v-row>
+          <p
+            v-for="technology in work.description"
+          >
+            {{ technology }},
+          </p>
+        </bracket-wrapper>
+      </v-col>
+    </v-row>
+    <v-row
+    class="no-gutters">
+      <v-col
+        cols="12"
+        md="6"
+        offset-md="6"
+        class="d-flex justify-md-start justify-center">
+        <div class="d-flex flex-column source-block">
+          <a :href="work.source" target="_blank">{{ $t('source') }}</a>
+          <a :href="work.online" target="_blank">{{ $t('online') }}</a>
+          <p>{{ work.year }}</p>
+        </div>
+      </v-col>
+    </v-row>
+  </fragment>
 </template>
 
 <script>
 import BracketWrapper from '@/components/BracketWrapper';
+import { Fragment } from 'vue-fragment';
 
 export default {
   name: 'PortfolioWork',
   components: {
     BracketWrapper,
+    Fragment,
   },
   props: {
     work: Object,
@@ -91,7 +104,7 @@ img {
   width: 400px;
   height: 400px;
   position: absolute;
-  top: -210px;
+  top: -180px;
   left: -253px;
   z-index: 1;
 }
@@ -130,7 +143,7 @@ p {
 }
 
 .technology-block {
-  max-height: 420px;
+  min-height: 380px;
 }
 
 .source-block {
@@ -146,15 +159,19 @@ p {
   .laptop {
     width: 300px;
     height: 300px;
-    top: -150px;
+    top: -120px;
     left: -215px;
   }
 
   .phone {
     width: 180px;
     height: 180px;
-    bottom: -90px;
+    bottom: -120px;
     right: -220px;
+  }
+
+  .technology-block {
+    min-height: unset;
   }
 }
 
@@ -239,6 +256,7 @@ p {
   a,
   .source-block p {
     font-size: 1.5rem;
+    padding-left: 20px;
   }
 }
 </style>

@@ -51,7 +51,7 @@ export default {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 601px) {
   .bracket {
     &.big {
       font-size: 3rem;
@@ -82,7 +82,7 @@ export default {
       font-size: 1.88rem;
     }
     &.small {
-      font-size: 1.43rem;
+      font-size: 1.4rem;
     }
   }
   .bracket_shadow-purple.small {
