@@ -25,12 +25,12 @@
       >
         <div class="images-container">
           <img
-            :src="`${$httpRequest}${work.images.laptop}`"
+            :src="`${$backendUrl}${work.images.laptop}`"
             alt="laptop"
             class="laptop"
           >
           <img
-            :src="`${$httpRequest}${work.images.phone}`"
+            :src="`${$backendUrl}${work.images.phone}`"
             alt="laptop"
             class="phone"
           >

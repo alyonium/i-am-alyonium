@@ -23,11 +23,12 @@
         :key="work.id"
     >
 
-      <animated-border-wrapper>
+      <loader v-if="isLoading"/>
+      <animated-border-wrapper v-else>
         <a :href="work.online"
            target="_blank"
            class="picture-link d-flex">
-          <img :src="`${$httpRequest}${work.preview}`" alt="screenshot" class="portfolio-photo">
+          <img :src="`${$backendUrl}${work.preview}`" alt="screenshot" class="portfolio-photo">
         </a>
       </animated-border-wrapper>
 
@@ -51,29 +52,29 @@
 </template>
 
 <script>
+import { getWorksPreviews } from '@/resources';
 import AnimatedBorderWrapper from '@/components/AnimatedBorderWrapper';
-import axios from 'axios';
+import Loader from '@/components/Loader';
 
 export default {
   name: 'PortfolioContent',
   components: {
     AnimatedBorderWrapper,
+    Loader,
   },
   data() {
     return {
       works: [],
+      isLoading: true,
     };
   },
-  mounted() {
+  created() {
     this.getWorkList();
   },
   methods: {
-    getWorkList() {
-      axios
-        .get(`${this.$httpRequest}/getPreviews`)
-        .then((response) => {
-          this.works = response.data;
-        });
+    async getWorkList() {
+      this.works = await getWorksPreviews();
+      this.isLoading = false;
     },
   },
 };

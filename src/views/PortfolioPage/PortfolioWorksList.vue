@@ -5,40 +5,41 @@
       v-for="work in works"
       :key="work.id">
       <bracket-wrapper :title="work.title" size="big" :isPortfolio="true">
-        <portfolio-work :work="work"/>
+        <loader v-if="isLoading"/>
+        <portfolio-work v-else :work="work"/>
       </bracket-wrapper>
     </v-container>
   </fragment>
 </template>
 
 <script>
-import axios from 'axios';
+import { getWorksList } from '@/resources';
 import { Fragment } from 'vue-fragment';
 import BracketWrapper from '@/components/BracketWrapper';
 import PortfolioWork from '@/views/PortfolioPage/PortfolioWork';
+import Loader from '@/components/Loader';
 
 export default {
   name: 'PortfolioWorksList',
   components: {
     BracketWrapper,
     PortfolioWork,
+    Loader,
     Fragment,
   },
   data() {
     return {
       works: [],
+      isLoading: true,
     };
   },
-  mounted() {
+  created() {
     this.getWorkList();
   },
   methods: {
-    getWorkList() {
-      axios
-        .get(`${this.$httpRequest}/getWorks`)
-        .then((response) => {
-          this.works = response.data;
-        });
+    async getWorkList() {
+      this.works = await getWorksList();
+      this.isLoading = false;
     },
   },
 };

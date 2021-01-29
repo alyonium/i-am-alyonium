@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import VueKonva from 'vue-konva';
+import { backendUrl } from '@/resources';
 import App from './App';
 import router from './router';
 import vuetify from './plugins/vuetify';
@@ -8,7 +9,8 @@ import vuetify from './plugins/vuetify';
 Vue.use(VueKonva);
 Vue.use(VueI18n);
 Vue.config.productionTip = false;
-Vue.prototype.$httpRequest = 'https://alyonium.herokuapp.com';
+
+Vue.prototype.$backendUrl = backendUrl;
 
 let userLang = window.navigator.language || window.navigator.userLanguage;
 
