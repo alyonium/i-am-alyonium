@@ -23,12 +23,29 @@
         :key="work.id"
     >
 
-      <loader v-if="isLoading"/>
-      <animated-border-wrapper v-else>
+      <animated-border-wrapper>
         <a :href="work.online"
            target="_blank"
            class="picture-link d-flex">
-          <img :src="`${$backendUrl}${work.preview}`" alt="screenshot" class="portfolio-photo">
+          <v-img
+            :src="`${$backendUrl}${work.preview}`"
+            :lazy-src="`${$backendUrl}${work.preview}`"
+            aspect-ratio="1"
+            alt="screenshot"
+            class="portfolio-photo">
+            <template v-slot:placeholder>
+              <v-row
+                class="fill-height ma-0"
+                align="center"
+                justify="center"
+              >
+                <v-progress-circular
+                  indeterminate
+                  color="deep-purple accent-2"
+                ></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
         </a>
       </animated-border-wrapper>
 
@@ -54,27 +71,23 @@
 <script>
 import { getWorksPreviews } from '@/resources';
 import AnimatedBorderWrapper from '@/components/AnimatedBorderWrapper';
-import Loader from '@/components/Loader';
 
 export default {
   name: 'PortfolioContent',
   components: {
     AnimatedBorderWrapper,
-    Loader,
   },
   data() {
     return {
       works: [],
-      isLoading: true,
     };
   },
-  created() {
+  mounted() {
     this.getWorkList();
   },
   methods: {
     async getWorkList() {
       this.works = await getWorksPreviews();
-      this.isLoading = false;
     },
   },
 };
