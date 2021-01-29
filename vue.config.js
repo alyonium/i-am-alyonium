@@ -3,9 +3,7 @@ module.exports = {
   transpileDependencies: [
     'vuetify',
   ],
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/alyonium/'
-    : '/',
+  publicPath: '/',
   chainWebpack: (config) => {
     config.module
       .rule('i18n')
