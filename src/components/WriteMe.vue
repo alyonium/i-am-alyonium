@@ -121,12 +121,13 @@ export default {
   z-index: 999999;
 }
 
-.form {
-  -webkit-box-shadow: 0 0 15px 5px rgba(124,77,255,1);
-  -moz-box-shadow: 0 0 15px 5px rgba(124,77,255,1);
-  box-shadow: 0 0 15px 5px rgba(124,77,255,1);
+@media (max-width: 1264px) {
+  .form {
+    -webkit-box-shadow: 0 0 15px 5px rgba(124,77,255,1);
+    -moz-box-shadow: 0 0 15px 5px rgba(124,77,255,1);
+    box-shadow: 0 0 15px 5px rgba(124,77,255,1);
+  }
 }
-
 @media (max-width: 599px) {
   .myCard {
     width: 380px;
