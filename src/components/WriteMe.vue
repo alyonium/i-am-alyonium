@@ -29,7 +29,8 @@
       v-model="valid"
       @submit.prevent="submit"
     >
-      <v-container fluid>
+      <v-container fluid
+      class="form">
         <v-row>
           <v-col
             cols="12"
@@ -114,6 +115,16 @@ export default {
 
 .myCard {
   max-width: 800px;
+}
+
+.v-snack {
+  z-index: 999999;
+}
+
+.form {
+  -webkit-box-shadow: 0 0 15px 5px rgba(124,77,255,1);
+  -moz-box-shadow: 0 0 15px 5px rgba(124,77,255,1);
+  box-shadow: 0 0 15px 5px rgba(124,77,255,1);
 }
 
 @media (max-width: 599px) {

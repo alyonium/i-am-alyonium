@@ -1,11 +1,9 @@
 <i18n>
 {
   "ru": {
-    "yandex-maps": "Яндекс.карты",
     "bem": "БЭМ"
   },
   "en": {
-    "yandex-maps": "Yandex.maps",
     "bem": "BEM"
   }
 }
@@ -23,7 +21,6 @@
         <p>HTML5, {{ $t('bem') }}<br>
           CSS3, SCSS<br>
           JavaScript (ES6)<br>
-          Bootstrap, Jquery<br>
           Vue, Node<br>
           Express, Axios<br>
         </p>
@@ -51,10 +48,9 @@
       <bracket-wrapper title="&.also" size="small">
         <p>Figma, Photoshop<br>
           Git, Subversion<br>
-          English B1<br>
           Github, Bitbucket<br>
-          Npm, Yarn<br>
-          {{ $t('yandex-maps') }}<br>
+          English B1<br>
+          TypeScript<br>
         </p>
       </bracket-wrapper>
     </v-col>
